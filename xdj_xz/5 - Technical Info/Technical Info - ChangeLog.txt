@@ -1,0 +1,21 @@
+
+XDJ-XZ ChangeLog
+
+6.1.10 - October 2020
+  - fixed right screen needle did not turn ("Blend")
+  - fixed several issues with bome alias
+  - Created seperate settings for MacOS and Windows  
+  
+6.1.9	- April 2020
+  - fixed shift+browser 
+  - "call memory" is now a second shift, to access loop move and zoom	edit delete
+
+6.1.8	- April 2020
+  - many bug fixes from the first release: missing loops, search, tempo reset, sync 
+  - now provide two versions: for both with BOME and without BOME 
+  - moved jog touch back to traktor and away from BOME	edit delete
+
+6.1.4	- Feb 2020 - browser knob fixed - vinyl mode OFF still buggy	edit delete
+
+6.1.3	- Dec 2019 - Initial release, ported from DDJ-SZ mapping
+  
