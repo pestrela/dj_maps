@@ -47,7 +47,9 @@ UNIFIED MAPPING CHANGELOG - DETAILS:
      - To enable them, press "shift+memory+button". To change make this permantely, change the config file (slide 4 of the manual)
     - Performance: 
      - significant performance increase when scrathing, especially on old Macs. 
-     - Tests were done on a Mac from mid-2012: 2.5Ghz dual core i5 / 8 Gb DDR3 / macOS catalina 10.15.6
+     - v7.2 tests were done on a Mac from 2012: 2.5Ghz dual core i5 / 8 Gb DDR3 / macOS catalina 10.15.6
+     - v6.8 tests were done in a Mac from 2010: 2.5Ghz dual core i5 / 6 Gb DDR3 / macOS High Sierra 10.13.6
+     
    - Pad modes: 
      - Main pad modes now match DDJ-1000 labels (hotcue -> padFX/Rolls -> beatjump -> Sampler).
      - per channel "macroFX mode" is in mode 6, and "jogFX" is in mode 8.

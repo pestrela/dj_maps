@@ -2,15 +2,81 @@ Latest Changelog:
 -----------------
 - v7.3.0 DDJ-1000 - November 2020 - "the simpler version, with MacOS performance and Reorderd pad modes"
 
-Known issues:
-  - crossing zero should blink sync as well
-  - using remix decks should open deck 4 in auto layout
-  - for deck 3+4, per channel mixerFX doesn't change mixerFX when 16x filters are disabled
-     deck 1+2 are ok
-  - TTFX: no need to mess around with dry/wet.
-     button ON + value=desired / press pause / value=MAX / button=OFF
-   -setting parallel/classic by hand should not disable auto layout
-   
+  - Performance:
+    - Raised default bome clock for macOS and windows. MacOS requires at least twice as much as windows.
+    - Changing the bome clock now blinks the current value on the jog screen for 6 seconds
+    - All blink operations now send 2x times LESS messages
+  - Pad modes:
+    - Advanced move pads now matches the trakor gui order
+    - Pad beatjump is now 4/8/16/32; with shift = 1; 1/2; 1/4; 1/8 
+      - (note: shift+"search arrow" = beatjump 1-beat)
+  - TTFX:
+    - The value displayed in the GUI now matches the knob
+    - Delay is now exponential, and was raised to maximum 2 seconds
+  - Auto enlarger
+    - "sync" button and "%" jog screen now blink on resetting to the minimum 6% as well
+  - Auto layout:
+    - manually changing "parallel"/"classic" or to "preparation" no longer disables auto-layout
+    - using "samples" opens automatically deck 3&4 (except if it is a STEM deck)
+  - 16x Filters:
+    - Deck 3+4 now can change the mixerFX per channel on 4x filters mode
+  - internal 
+    - compiler now generates 4 decks in a single go
+    - "deck is loaded" message is sent earlier + twice, to avoid drops. They can still happen, however.
+  - jog screen:
+    - Touching the jog for scracthing shows "C" besides turning off the jog ring.
+    
+----------     
+    
+  Fake array variables (per channel):
+    ABCD EFGH IJKL  _M_ _N_  OPQR STUV XYZW  _0_ 1234 5678  _9_ 
+
+normal loops, again:
+--------------------
+pads: 
+  - loop set+size
+    - if no loop -> set at that point
+    - if loop:
+      - same size -> turn OFF     (even if we changed the edges!)
+      - new size: chnge out point
+        
+direct command:
+  - loop size selector:
+    - if same size, does not change anything
+    
+  - loop set - disables loop if we are there!
+  
+  
+ 
+    
+    
+CDJ-3000 loops:
+--------------
+  https://www.native-instruments.com/forum/threads/support-odd-numbered-loops-for-polyrhythms-like-the-cdj-3000.425399/
+    
+  Desired outcome: 
+    1: 3/4 ; 2: 1 ; 3: 1.5 ; 4: 3;
+    5: 5   ; 6: 6 ; 7: 7   ; 8: 9
+    
+  Method:
+    1: 1-1/4 ; 2: 1   ; 3: 2-1/2 ; 4: 4-1
+    5: 4+1   ; 6: 8-2 ; 7: 8-1   ; 8: 8+1
+    
+    
+   IN move size:     CC "71" 
+    (0 = xfine ; 1= fine; 2 = 1/16; 3=1/8; 
+    4=1/4; 5=1/2; 6=1; 7=2; 8=4; 9=8; 10=16;11=32; 12=loop)
+
+    
+  fixed: note 88, no shift
+   2 1 1/2 1/4
+   4 8 16 32
+    
+    
+  variables:
+    "g5"/4 - polyrythms - current selection (0: none;  1= 3/4; 2=1; ....
+    "h0"/1 - which channel (0: deck A; 1:deck B; ...)
+       note: this might cause a small race condition
   
    
  
@@ -32,21 +98,55 @@ Steps to release a new version:
   - cmdr: check encoder relative
   
   
-swap modes:
-  macroFX to padFX2
-    G#1 (32) <-> G#5 (80) 
-    E2  (40) <-> E6  (88)
+TSI settings:
+-------------
+  source: TP3 manual
+
+- Keyboard Mappings: 
+  - Export / import settings for keyboard mappings as configured in Preferences Controller Manager.
+- Controller Mappings:
+  - Export / import settings for Controller Mappings as configured in Preferences > Controller Manager.
+- GUI Layout: 
+  - Export / import settings for GUI layouts as set in Preferences > Layout Manager.
+  - 2 decks, advanced mode
+  - deck header
+  - mixer layout
+
+- File Load- And Write- paths: 
+  - Export / import settings for file directories as configured in Preferences > File Management > Directories.
+- Favorites: 
+  - Export / import favorite browser details as configured in Preferences > Browser Details.
+  - preparation playlist  
+- Broadcasting: 
+  - Export / import Proxy, Server and Metadata settings from Preferences > Broadcasting.
+- Audio Device Settings: 
+  - Export / import audio setup device details from Preferences > Audio Setup.
+  - routing
+  - external mixing mode
+- MIDI Clock settings: 
+  - Export / import MIDI clock setting from Preferences > MIDI Clock.
+- Effect Settings: 
+  - Export / import effects setting including 
+  - FX Unit routing, 
+  - FX Unit mode and 
+  - FX pre-selection as configured in Preferences > Effects.   
+  - MixerFX
+- Other Preferences and settings: 
+  - Export / import all other preference and settings such as Global settings for example, 
+  - Tooltips on or off, or 
+  - if TRAKTOR starts in Fullscreen mode etc.
+  - Browser columns
+  - sync mode: beatsync
+  - only on-air can be tempo master
+  - deck header fields
+  - remix decks (all set)
     
-  jogFx to sampler 
-    C3  (48) <-> E8  (112)
-    G#3 (56) <-> C9  (120)
-  
------
     
-  jogFx to sampler 
-    C3  (48) <-> E8  (112)
-    G#3 (56) <-> C9  (120)
-  
+    
+What files and folders on the traktor installtion:
+--------------------------------------------------
+  https://support.native-instruments.com/hc/en-us/articles/210274225-What-Files-and-Folders-does-TRAKTOR-Install-on-my-System-
+ 
   
   
 DEBUG: keyboard shortcuts:
@@ -460,7 +560,7 @@ BOME side:
     second row:  OneShoot/Loop
       
       
-STEM MODIFIERS:
+STEM MODIFIERS:  ((GLOBAL)
    "n9"/1 - CONFIGURE STEMS MODIFIER (use mic EQ to change) (0: enabled; : enabled)
    "n0"/1 - which DECK  (0: none;  1: deck A; 2: deck B; 3: deck C; 4: deck D)
    "m9"/1 - which SLOT  (0: slot1; 1: slot2; 2: slot3; 3: slot4)
@@ -471,8 +571,8 @@ STEM MODIFIERS:
 
     "j0"/1 - deck select shortcut - remix decks
    
-
-SELECTED SAMPLE:
+ 
+SELECTED SAMPLE:   (PER DECK)
    "m1"/4 - sequencer/stems  (selected sample for LEFT, slot 1..4)   
    "m5"/4 - sequencer/stems  (selected sample for RIGHT, slot 1..4)
    
@@ -1021,6 +1121,56 @@ NEW CLOCKS and BLINK METHODS:
       best example: shift+play, for TTFX.
     
 
+debug dump of clock:
+--------------------
+     1513 - RULE 0.39:35 assignment: (oo=g0) = 0
+  2601513 - RULE 0.39:36 assignment: (oo=zx) = 0
+  2601513 - RULE 0.39:37 assignment: (oo=zy) = 0
+  2601513 - RULE 0.39:38 assignment: (oo=zw) = 0
+  2601513 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2601763 - RULE 0.39:35 assignment: (oo=g0) = 1
+  2601763 - RULE 0.39:36 assignment: (oo=zx) = 0
+  2601763 - RULE 0.39:37 assignment: (oo=zy) = 0
+  2601763 - RULE 0.39:38 assignment: (oo=zw) = 1
+  2601763 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2602013 - RULE 0.39:35 assignment: (oo=g0) = 2
+  2602013 - RULE 0.39:36 assignment: (oo=zx) = 0
+  2602013 - RULE 0.39:37 assignment: (oo=zy) = 1
+  2602013 - RULE 0.39:38 assignment: (oo=zw) = 0
+  2602013 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2602263 - RULE 0.39:35 assignment: (oo=g0) = 3
+  2602263 - RULE 0.39:36 assignment: (oo=zx) = 0
+  2602263 - RULE 0.39:37 assignment: (oo=zy) = 1
+  2602263 - RULE 0.39:38 assignment: (oo=zw) = 1
+  2602263 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2602513 - RULE 0.39:35 assignment: (oo=g0) = 4
+  2602513 - RULE 0.39:36 assignment: (oo=zx) = 1
+  2602513 - RULE 0.39:37 assignment: (oo=zy) = 0
+  2602513 - RULE 0.39:38 assignment: (oo=zw) = 0
+  2602513 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2602763 - RULE 0.39:35 assignment: (oo=g0) = 5
+  2602763 - RULE 0.39:36 assignment: (oo=zx) = 1
+  2602763 - RULE 0.39:37 assignment: (oo=zy) = 0
+  2602763 - RULE 0.39:38 assignment: (oo=zw) = 1
+  2602763 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2603013 - RULE 0.39:35 assignment: (oo=g0) = 6
+  2603013 - RULE 0.39:36 assignment: (oo=zx) = 1
+  2603013 - RULE 0.39:37 assignment: (oo=zy) = 1
+  2603013 - RULE 0.39:38 assignment: (oo=zw) = 0
+  2603013 - RULE 0.39:39 assignment: (oo=zz) = 0
+
+  2603263 - RULE 0.39:35 assignment: (oo=g0) = 7
+  2603263 - RULE 0.39:36 assignment: (oo=zx) = 1
+  2603263 - RULE 0.39:37 assignment: (oo=zy) = 1
+  2603263 - RULE 0.39:38 assignment: (oo=zw) = 1
+  2603263 - RULE 0.39:39 assignment: (oo=zz) = 0    
+    
     
 SEEK - redone with HC4500:
 --------------------------
@@ -1034,6 +1184,8 @@ major bugs history:
     - tempo adjust bug = tempo adjust is 7 bits and 14 bits at the same time
     - modifier blend: screen modifiers lacked blend
     - "deck is loaded" blend: eventough it is boolean, it needs BLEND
+    
+    
     
   history: 
    v1.00 pioneer SX2:
@@ -1092,20 +1244,18 @@ PHASE FEATURE:
   100 -> +10
   
   
-DECK LOADED TRIGGER:
+DECK IS LOADED TRIGGER:
 --------------------
-  // TODO: MERGE THESE VARIABLES  <<<<<<<<<<<<<<<<<<<<< 
-
-  "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded)
+ TK IN LOADED: channel 7
+     deck A:  A#4 70 / 46 / C5     -> "ks"/4   (0: unloaded; 127: loaded)
+     deck B:  B4  71 / 47 / C#5   
+     deck C:  c5  72 / 48 / a#6 
+     deck D:  c#5 73 / 49 / d#8
+ 
+ TK IN loaded: channel 16 
+     note 0,1,2,3  
   
-  TK IN LOADED: channel 7
-     deck A:  A#4 70 / C5     -> "ks"/4 
-     deck B:  B4  71 / C#5   
-     deck C:  c5  72 / a#6 
-     deck D:  c#5 73 / d#8
-     
-                          
-  BPM is only sent if it changes!!
+ This message is sent twice because of overflow issues!
   
   
   
@@ -1158,11 +1308,12 @@ Tempo range enlarger:
   Tempo Range enlarger STATE:   "io"    
      0 = nothing
      1 = to ENLARGE in next iteration
+     3 = to RESET 6% in the next iteration
      2 = waiting to move back
+ 
      
   Tempo Range enlarger CONFIG:   "gm"    
   
-  "io"/4 tempo range automatic enlarger    (0: nothing; 1: next iteration; 2:waiting) 
   
   ch1..4:
     119 "B8" - enlarger: tempo range Reset to 6%
@@ -1179,22 +1330,24 @@ Soft Takeover:
     0 - same tempo
     1 - different tempos
  
-  "ls"/4  we just changed tempo  (0: none; 1: timer running)
+  "ls"/4  soft takeover timer running   (0: none; 1: timer running)
     (DOESNT mean it is blinking - see "js" for that)
     
-  "kx"/4  Previewing after changing loop values  (0: none; 1: loop/move; 2: tempo range)
-     NOTE: this is to deprecate!  
+  "kx"/4  Previewing after auto enlarge  (0: none; 1: loop/move changed; 2: auto-enlarge triggered)
     
  
-   parei aqui. todo: deprectae kx, add blinking sync on auto-reset (ls=1)
+   parei aqui (??). todo: deprecate kx,
    
 Loops:
 ------
   IN is active loop:   CC "76" -> "le"
        pressed IN button    -> "lo"
   
-  IN loop size:     CC "70" -> "l1" 
-  IN move size:     CC "71" -> "n1"  (0..12 => 0,1,2,3,4,8,16,32)
+  IN loop size:     CC "70" -> "l1"  
+  
+  IN move size:     CC "71" (0 = xfine ; 1= fine; 2 = 1/16; 3=1/8; 4=1/4; 5=1/2; 6=1; 7=2; 8=4; 9=8; 10=16;11=32; 12=loop)
+  
+                            -> "n1"  (0..12 => 0,1,2,3,4,8,16,32)
                             -> "n5" (flag that signifies "move size" equals "loop size")    (TO deprecate)
                          
                               (TODO: simplify this structure)
@@ -1209,7 +1362,7 @@ Jog Ring (End warning):
   
   TK IN phase          CC "85" -> "je"
 
-  TK IN jogFX state    ch5 CC "126" -> "gx"   (this could be a single variable)    (THIS IS IN PAGE #1!)
+  TK IN jogFX state    ch5 CC "126" -> "z9"   (this could be a single variable)    (THIS IS IN PAGE #1!)
   
 
   ______ todo: why /4 bpm ????  <<<<<<<<<<<<<<<<<<
@@ -1250,7 +1403,7 @@ CLOCK IMPLEMENTARION:
     
     FINAL total time:       "lx"  (unit: seconds)
     FINAL total (lock):     "nx"  (0: init ; 1: wait 1 seconds; 2: wait 1 minute; 3: wait middle)
-
+            (this is reset at deck load message) 
     
     
     
@@ -1718,7 +1871,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
     "gm"/1 - config: tempo enlarger enabled
     "gn"/1 - config: advanced config enabled 
 
-  "g5"/4 - FREE
+  "g5"/4 - polyrithms - current selection  0: none; 1= 3/4; 2=1; ....
 
   "ga"/4  SPECIAL SHIFTS     -> TODO: simplify this
     "ga"    shift1  (shared to all decks)
@@ -1730,7 +1883,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "gi"/4  USB/line real USB
   "gs"/4  USB remember fader level
   
-  "gx"/4  FREE
+  "gx"/4  free
   
   
   *****
@@ -1749,7 +1902,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
     "i0"/1 - Channel for echo out
     "i9"/1 - external monitor cue 
     "im"/1 - used by layout 
-    "in"/1 - CFX buttons are blinking            (was farn martin lock jog - BAD!) <<<<<<<<<<<<<
+    "in"/1 - CFX buttons are blinking            (was fran martin lock jog - BAD!) <<<<<<<<<<<<<
     
     
   "ie"/4  (double click per deck -> 4 separate variables)
@@ -1788,12 +1941,11 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "ke"/4  flux (AKA slip)
   "ki"/4  Reverse 
   "kx"/4  Previewing after changing loop values  (0: none; 1: loop/move; 2: tempo range)
-     NOTE: this is to deprecate!  
     
   
   *****
     "l0"/1  Global: mode elastic beatgrid
-    "l9"/1  superknob configuration OFF/ON
+    "l9"/1  16x filters configuration OFF/ON
     "lm"/1 - FREE
     "ln"/1 - FREE
  
@@ -1836,7 +1988,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "ni"/4  HC4500 seconds 
   "no"/4  SEEK lock
   "ns"/4  HC4500 frames
-  "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded)
+  "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded; 2: ...)
 
   
   *****
@@ -1847,7 +1999,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
   
   "y1"/4  MIXERFX mouse selection
   "y5"/4  JOG NEEDLE
-  "ye"/4  FREE
+  "ye"/4  DECK FLAVOR (STEM)   (1: track deck / 2: remix / 3: stem / 4: live input)
   "yi"/4  FREE
   "yx"/4  FREE  (note: this includes yy, which is not local!) 
 
@@ -1909,24 +2061,14 @@ layout deck shift:
        (=Automatic layout)
        All gestures enabled + automatically change on simple press
  
-  "in"/1:  FREE
   
-  "im"/1 - Current Layout. This is read on the init phase. 
+  "im"/1 - CURRENT LAYOUT. This is read on the init phase. 
     0: init
     1: auto, 2D P
     2: auto, 4D P
     3: auto, 2D C
     4: auto, 4D C
     5: preparation
-  
-  
-  on traktor init: previous layout is kept
-  
-  on bome init: initial config is set
-  
-  on changing on the gui to another value: automatic is disabled.
-  
-  shift_deck = turn on again auto
   
     
   "j0"/1 - deck select shortcut - remix decks
@@ -1935,7 +2077,16 @@ layout deck shift:
      
      this is then Latched until we press deck select explicitly
 
+    
+  on traktor init: previous layout is kept
   
+  on bome init: initial config is set
+  
+  on changing on the gui to another value: automatic is disabled.
+  
+  shift_deck = turn on again auto
+  
+
   
   
 Generic Double click support:
@@ -2001,17 +2152,18 @@ c) deck is playing, but flux OFF:
       
        
 update 2020-11-02:
+------------------
   TTFX delay is now controlled as follows by the sampler volume.
-  Sampler value:
-    - INPUT is scaled to 0..100  -> "k0"
-    - INPUT is scaled to 16K..8K -> knob1
-        ch07 CC 22+54 - Sampler volume + shift3   (NEW BOME) <<<
-      
-  
   Step1:
-    - K0 is scaled to 16K..8K -> knob1
-    - K0 is scalled to 0ms..1500ms -> keep deck playing
-    
+    Sampler value:
+    - INPUT:
+      - value is first scaled to a percentage 0..100  -> "k0"
+      - for user feedback, original value is sent unchanged
+    - OUTPUT:
+      - for TIME: 9xP + P*P/10   (semi exponential)
+      - for TTFX, percentage is scaled to 16K..5,4K   (note: 16k = "none")
+         -> ch07 CC 22+54 - Sampler volume + shift3   (NEW BOME) <<<
+      
   step2:
     - delay 150ms
     
@@ -2075,7 +2227,7 @@ ColorFX state machine:
   when "0" is active, pressing "shift+1" sends "8 off" then "9 on"
   
      
-Filter Dual Polarity (superknobs):
+Filter Dual Polarity (16x filter):
 ----------------------------------
   Input (from DDJ):
     button: ch7     notes 0/1/2/3  
@@ -2093,7 +2245,7 @@ Filter Dual Polarity (superknobs):
     
   Variables:    
     "z0"/1 - CONFIGURATION: 0: Windows; 1: MacOS
-    "l9"/0 - CONFIGURATION: are superknobs enabled?  (0: disabled; 1: ENABLED) 
+    "l9"/0 - CONFIGURATION: are 16x filters enabled?  (0: disabled; 1: ENABLED) 
 
     "j1"/4  CFX which SET we selected (per channel)  (0: set #1; 1: set #2; ...)
     "j5"/4  CFX enabled/disabled      (per channel)  (0: disabled; 1: enabled on CFX buttons; 2:enabled per channel)
@@ -2133,13 +2285,13 @@ Filter Dual Polarity (superknobs):
       
 Use cases: macOS version:
 -------------------------      
-  macOS version - superknob off:
+  macOS version - 16x filters OFF:
     no translation done
     pressing color button = changes single mixerFX for all chanels
     
     turning knob - no translation
     
-  superknob on:
+  16 filters ON:
     color buttons select both mixerFX and macroFX
     filter#1 is kept to mixerFX
     filter#3 translated to macroFX (new code)
@@ -2440,7 +2592,6 @@ Channel 1..4 FREE CCs (TK IN):
    90: streetch slow
    91: streetch fast
    
-   92: free
    
    93:  STEM FX - relative slot1   (NOT USED)
    94:  STEM FX - relative slot2
@@ -2468,9 +2619,11 @@ Channel 1..4 FREE CCs (TK IN):
    111: INST DOUBLES - FROM "C" to this deck
    112: INST DOUBLES - FROM "D" to this deck
         
-   113: 
-   114: 
-   115: 
+      92: MOVE SIZE (IN, direct)
+
+   113: Loop size + Set    DIRECT
+   114: Loop size selector DIRECT
+   115: Loop active ON/OFF
    116: 
    
    
@@ -2493,7 +2646,7 @@ Channel 1..4 CCs (TK OUT):
   CC "66"  - tempo adjust
   CC "67"  - advanced panel status OUT -> "h5"/4 -> "CC 79"
   CC "68"  - cue (state)
-  CC "69"  - FREE
+  CC "69"  - deck flavor STEM
   
   CC "70"  - loop size
   CC "71"  - move size
