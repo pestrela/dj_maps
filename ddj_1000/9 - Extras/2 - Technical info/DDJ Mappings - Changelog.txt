@@ -1,7 +1,6 @@
-
-  
 CHANGELOG - SUMMARY:
 --------------------
+  - v7.3.0 - DDJ-1000 - Huge performance jump in MacOS. Central pad configuration.
   - v7.2.0 - DDJ-1000 - Advanced features shipped OFF, better MacOS Performance and reorderd Pad modes
   - v7.1.0 - DDJ-1000 - Reliability and performance improvements
   - v7.0.0 - DDJ-1000 - Mapping remade from scratch. 16x SuperKnobs, STEMS, Remix recorder, TTFX, Tempo range 
@@ -19,16 +18,68 @@ CHANGELOG - SUMMARY:
   - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
   - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
 
-  note:  See also excel file "Technical Info - Version history.xls"
-     
-   
-KNOWN ISSUES (latest mapping):
-------------------------------
+
+KNOWN ISSUES:
+-------------
+ (Note: these issues refer to the latest versions of the mapping, Traktor and Bome)
+ 
+ - Bome: "auto start with OS" is ignored on importing the setting. 
+   - Workaround: set it by hand instead
+ - Mapping: Deck 3&4 lack timestamps 
+ - Trakor: Its impossible to set 9x mixerFX in macOS
 
 
    
-UNIFIED MAPPING CHANGELOG - DETAILS:
-------------------------------------
+MAPPING CHANGELOG:
+----------------------------
+- v7.3.0 DDJ-1000 - December 2020 - "The huge macOS performance jump"
+
+Major topics is a huge jump in macOS Catalina performance, a central re-configuration via the pads, 
+a simpler way to change the bome clock, TurntableFX now matches the knob position.
+
+There were also smaller improvements and bug fixes (see list below)
+ 
+- Major:
+  - Performance:
+    - Significant performance increase for macOS catalina (other OS versions were not tested)
+    - This was done by botbh sending less messages and by avoiding back-to-back messages 
+    - Default bome clock is now 30 for both MAC and PC
+  - Mapping Re-Configuration:
+    - "Deck A HotCue page 2" is now a central configuration page. 
+    - Use "shift+memory+pad" to toggle features ON and OFF.
+  - Bome clock customization:
+    - New state added to change the bome clock without using 2 hands.
+    - Enter the bome clock change mode using the config pads or pressing browse encoder (with shift+memory)
+    - Inside tbe new mode, the current clock value will now blink. Simply turn the encoder to 
+  - TTFX:
+    - The value displayed in the traktor screen now matches the knob position
+    - Delay is now exponential, and was raised to maximum 2 seconds
+    
+- Minor:
+  - Pad modes re-organized:
+    - Advanced move pads now matches the trakor GUI order
+    - Pad beatjump is now 4/8/16/32; with shift = 1; 1/2; 1/4; 1/8 
+      - (note: shift+"search arrow" = beatjump 1-beat)
+  - Auto enlarger
+    - "sync" button and "%" jog screen now blink on resetting to the minimum 6% as well
+  - Auto layout:
+    - manually changing "parallel"/"classic" or to "preparation" no longer disables auto-layout
+    - using "samples" opens automatically deck 3&4 (except if it is a STEM deck)
+  - 16x Filters:
+    - Deck 3+4 now can change the mixerFX per channel on 4x filters mode as well
+  - Internal 
+    - compiler now generates all 4 decks in a single go
+    - "deck is loaded" message is sent earlier + twice, to avoid drops. Drops can still happen, however.
+  - Scratching:
+    - Touching the jog for scracthing shows "C" besides turning off the jog ring.
+  - Jogwheel:
+    - tuning the jog on the side when deck is paused now moves the needle as well
+  - Startup / Reset cases:
+    - Crossfader selector is now read properly at startup and reset (was not fixed in 7.2.0)
+    - (BeatFX selector was already read correctly in 7.2.0)
+  - Installation   
+    - Traktor macOS mapping now correctly has BMT1 for the first 2x pages
+    
 
 - v7.2.0 - DDJ-1000 - November 2020 - Advanced features shipped OFF, better MacOS performance and reorderd Pad modes
 
@@ -173,7 +224,7 @@ UNIFIED MAPPING CHANGELOG - DETAILS:
     A major jump for the SX2/SZ/SRT mapping, I've now managed to merge the DDJ-1000 mapping to the SX2/SZ/SRT family of controllers.
     This is the first release with BOME; many more features are already coded and will be released soon.
 
-    Biggest features are all pad modes in the front, dedicated beatjump buttons, preview player and loop adjust with the jog, 
+    Biggest features are all Pad modes in the front, dedicated beatjump buttons, preview player and loop adjust with the jog, 
   
   - New features:
     - Pad modes: All most-used pad modes have been moved to the front 
@@ -365,8 +416,6 @@ are the same as the new mappings.
   - Traktor: TP2 2.6.8
   - URL: https://www.pioneerdj.com/en/support/software/archive/ddj-sx/#midi-mapping-files
  	
- 
-  
-  
     
-    
+
+  
