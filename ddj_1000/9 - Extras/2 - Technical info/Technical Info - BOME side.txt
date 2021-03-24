@@ -1,30 +1,109 @@
-Latest Changelog:
------------------
-- v7.3.0 DDJ-1000 - November 2020 - "the simpler version, with MacOS performance and Reorderd pad modes"
 
-  - Performance:
-    - Raised default bome clock for macOS and windows. MacOS requires at least twice as much as windows.
-    - Changing the bome clock now blinks the current value on the jog screen for 6 seconds
-    - All blink operations now send 2x times LESS messages
-  - Pad modes:
-    - Advanced move pads now matches the trakor gui order
-    - Pad beatjump is now 4/8/16/32; with shift = 1; 1/2; 1/4; 1/8 
-      - (note: shift+"search arrow" = beatjump 1-beat)
-  - TTFX:
-    - The value displayed in the GUI now matches the knob
-    - Delay is now exponential, and was raised to maximum 2 seconds
-  - Auto enlarger
-    - "sync" button and "%" jog screen now blink on resetting to the minimum 6% as well
-  - Auto layout:
-    - manually changing "parallel"/"classic" or to "preparation" no longer disables auto-layout
-    - using "samples" opens automatically deck 3&4 (except if it is a STEM deck)
-  - 16x Filters:
-    - Deck 3+4 now can change the mixerFX per channel on 4x filters mode
-  - internal 
-    - compiler now generates 4 decks in a single go
-    - "deck is loaded" message is sent earlier + twice, to avoid drops. They can still happen, however.
-  - jog screen:
-    - Touching the jog for scracthing shows "C" besides turning off the jog ring.
+
+ 
+  
+TODO:
+ - pad "8" on rolls page is still not not turned on
+ - Beat FX: (golden lady italy) "memory"+beat Arrow - changes selected effect in FX unit4 
+  
+   
+idea for CMDR:
+  - reports: collapse on purpose: 
+  - remove device page to see just commands
+  - replace command number (hotcue 1 type) with X to collapse on purpose 
+  - remove all conditions command
+   
+   
+for v7.5
+ - have nothing going out at first step of installation
+ - 4 beats / 8 beats default loop
+ - backspin:   already found it it’s with the m2 modifier put it the sensitivity on 20 %now the backspin is much longer
+ - implement loop midi:  https://www.native-instruments.com/forum/threads/mappable-traktor-lfo-beatsynced.167529/
+ - check LINE selector for volume turn off safety feature (beatFX is ok)
+ - move backwards loop to pad modes - remove lag
+ - loops active long press
+ - move jog adjust to its own constant state (like cdjs)
+  
+-----------------
+  
+rekordbox mode:
+   go to start of track: shift+cue
+   navigation features just like rekordbox
+	 quick search (holding search)
+	 quick search (search+jog turn)
+		
+  volume zero - by some reason it still did not read the fader position at lower
+  move needle with pitch bend message as well.
+
+documentation:
+  quick search: expain how it is done
+	move to front: explain how it is done
+	how to change the clock value
+	
+  
+  
+Steps to release a new version:
+-------------------------------
+  - pdfs: regenerate all pdfs
+  - bome settings: re-export, remove paths and project
+
+  - bome: DISABLE dev mode
+  
+  - traktor: check 4x default mixerFX  <<<<<<<<<<<<<
+  - traktor: enable HC-4500
+  - traktor: select 2-decks classic (smaller screen)
+  
+  - cmdr: check encoder relative
+  
+  ------
+  - mac version: copy paste TSIs by hand in cmdr
+  - mac version: set mac bit
+  
+    
+ 
+
+   
+    
+performance improvement - graphs:
+---------------------------------
+
+  The sequence of actions is as follows:
+  a) play deck A normally. 
+    - Outputs are needle turning and the mixer "VU meter"
+  b) kill gain to remove the "VU meter". Deck is stll playing
+  c) do some basic scratch
+
+  
+  
+Blink timer Performance:
+------------------------
+  blink clock -> t_blink (coalesced = 1) -> t_blink1
+      t_blink -> led sync -> solid on -> if coalesced -> exit
+        
+      
+  pressed button -> calc () -> cascade (coalescend = 0 ) -> t_blink1
+  
+  
+  "xx":   0 = by normal; 1 = by blinking        (are we trying to blink?)
+  "hm"/1: 0 = woke by timer;  1 = woke by button          (did we trigger by button)
+  
+  "ww":   blink scaled delay 
+  "hn"/1 - blink slowdown master (5ms
+
+    
+
+    
+configuration user feedback:
+----------------------------
+  - tempo emarger - master tempo doesnt blink
+  - auto layout - impossible
+  - ttfx - play doesnt blink
+  - superknobs - no feedback
+  
+  - sync aid - yes
+  - external cue - yes
+    
+    
     
 ----------     
     
@@ -48,17 +127,29 @@ direct command:
   
   
  
+Dual deck mode:
+---------------
+  "ln"/1 - config: dual deck
+ 
+   0: disabled
+   1: only scratch
+   2: +pads
+   3: +mixer as well
+   
+  
+  
+ 
     
     
 CDJ-3000 loops:
 --------------
   https://www.native-instruments.com/forum/threads/support-odd-numbered-loops-for-polyrhythms-like-the-cdj-3000.425399/
     
-  Desired outcome: 
+  DESIRED OUTCOME: 
     1: 3/4 ; 2: 1 ; 3: 1.5 ; 4: 3;
     5: 5   ; 6: 6 ; 7: 7   ; 8: 9
     
-  Method:
+  METHOD:
     1: 1-1/4 ; 2: 1   ; 3: 2-1/2 ; 4: 4-1
     5: 4+1   ; 6: 8-2 ; 7: 8-1   ; 8: 8+1
     
@@ -74,73 +165,79 @@ CDJ-3000 loops:
     
     
   variables:
-    "g5"/4 - polyrythms - current selection (0: none;  1= 3/4; 2=1; ....
-    "h0"/1 - which channel (0: deck A; 1:deck B; ...)
-       note: this might cause a small race condition
-  
-   
- 
-  
-Steps to release a new version:
--------------------------------
-  - pdfs: regenerate all pdfs
-  - settings: enable log warning in settings
-  - settings: re-export, remove paths and project
+    "g5"/4 - polyrhythms - current selection (0: none;  1= 3/4; 2=1; ....
 
-  - bome: DISABLE debug preset
-  - bome: enable gestures
-  - bome: set clock to 60
+    
+  TSI side:
+    h0 = 1..4
+      
+------
 
-  - traktor: check 4x default mixerFX  <<<<<<<<
-  - traktor: enable HC-4500
-  - traktor: select 2-decks classic (smaller screen)
-  
-  - cmdr: check encoder relative
+  TSI commands:
+     92:  POLY - MOVE SIZE (IN, direct)
+     113: POLY - Loop size + Set    DIRECT
+     114: POLY - Loop size selector DIRECT
+     115: POLY - Loop active ON/OFF
+     116: FREE
+     
+     
+  operations:
+    cancel:
+      loop active: 115
+    
+  Set poly:
+    a) set 32 beats   (ch1)
+    b) set base beats (ch1)
+    
+    c) set move loop out (ch8 = pad page)
+    d) set move size (ch1)
+    e) do it  (ch8)
+    
   
   
 TSI settings:
 -------------
   source: TP3 manual
 
-- Keyboard Mappings: 
-  - Export / import settings for keyboard mappings as configured in Preferences Controller Manager.
-- Controller Mappings:
-  - Export / import settings for Controller Mappings as configured in Preferences > Controller Manager.
-- GUI Layout: 
-  - Export / import settings for GUI layouts as set in Preferences > Layout Manager.
-  - 2 decks, advanced mode
-  - deck header
-  - mixer layout
+  - Keyboard Mappings: 
+    - Export / import settings for keyboard mappings as configured in Preferences Controller Manager.
+  - Controller Mappings:
+    - Export / import settings for Controller Mappings as configured in Preferences > Controller Manager.
+  - GUI Layout: 
+    - Export / import settings for GUI layouts as set in Preferences > Layout Manager.
+    - 2 decks, advanced mode
+    - deck header
+    - mixer layout
 
-- File Load- And Write- paths: 
-  - Export / import settings for file directories as configured in Preferences > File Management > Directories.
-- Favorites: 
-  - Export / import favorite browser details as configured in Preferences > Browser Details.
-  - preparation playlist  
-- Broadcasting: 
-  - Export / import Proxy, Server and Metadata settings from Preferences > Broadcasting.
-- Audio Device Settings: 
-  - Export / import audio setup device details from Preferences > Audio Setup.
-  - routing
-  - external mixing mode
-- MIDI Clock settings: 
-  - Export / import MIDI clock setting from Preferences > MIDI Clock.
-- Effect Settings: 
-  - Export / import effects setting including 
-  - FX Unit routing, 
-  - FX Unit mode and 
-  - FX pre-selection as configured in Preferences > Effects.   
-  - MixerFX
-- Other Preferences and settings: 
-  - Export / import all other preference and settings such as Global settings for example, 
-  - Tooltips on or off, or 
-  - if TRAKTOR starts in Fullscreen mode etc.
-  - Browser columns
-  - sync mode: beatsync
-  - only on-air can be tempo master
-  - deck header fields
-  - remix decks (all set)
-    
+  - File Load- And Write- paths: 
+    - Export / import settings for file directories as configured in Preferences > File Management > Directories.
+  - Favorites: 
+    - Export / import favorite browser details as configured in Preferences > Browser Details.
+    - preparation playlist  
+  - Broadcasting: 
+    - Export / import Proxy, Server and Metadata settings from Preferences > Broadcasting.
+  - Audio Device Settings: 
+    - Export / import audio setup device details from Preferences > Audio Setup.
+    - routing
+    - external mixing mode
+  - MIDI Clock settings: 
+    - Export / import MIDI clock setting from Preferences > MIDI Clock.
+  - Effect Settings: 
+    - Export / import effects setting including 
+    - FX Unit routing, 
+    - FX Unit mode and 
+    - FX pre-selection as configured in Preferences > Effects.   
+    - MixerFX
+  - Other Preferences and settings: 
+    - Export / import all other preference and settings such as Global settings for example, 
+    - Tooltips on or off, or 
+    - if TRAKTOR starts in Fullscreen mode etc.
+    - Browser columns
+    - sync mode: beatsync
+    - only on-air can be tempo master
+    - deck header fields
+    - remix decks (all set)
+      
     
     
 What files and folders on the traktor installtion:
@@ -163,14 +260,18 @@ DEBUG: keyboard shortcuts:
   
 DEBUG: DDJ buttons:
 -------------------
-  (for deck a only):
-  
-  "memory": stop all clocks
-  
-  "<<" : start blink  clock (only)
-  ">>" : start master clock (only)
+  PFL monitor cue:
+    3: start blinking
+    1: start needle
+    2: stop clocks
+    4: do a reset
     
-      
+  
+
+
+
+
+    
     
 BOME variables:
 ---------------
@@ -279,7 +380,15 @@ STANDARD FOR TEMP VARIABLES:
     PP = vel
 
 
-
+DEMO deck A only:
+-----------------
+  IN deck b..c:
+    page 1: m4=7
+    page 2: m8=7
+  
+    
+    
+    
 BOME Project structure:
 -----------------------
 [MIDI.routes]
@@ -424,15 +533,19 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
          XDJ-XZ case: this is used by reverse (to confirm?)
 		 
 	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
-	  0- none
+	  0:   none
 	  1-7: which jog FX
   
-	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)   ---- TO DEPRECATE
       0: nothing
       1: Doing loop IN+OUT adjust 
       2: Doing loop OUT adjust
     
-	M5: __FREE__
+	M5: JOGFX/SLICER MODE:
+      (what happens when we enter shift+mode8?)
+      0: jogFX
+      1: Slicer
+  
 	
   M6: SLICER MODE
       0: mode1:    8 slices, 1/1
@@ -448,6 +561,11 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
     selected by 
 	  this is shared with play pause FX  <<<<<<< why?
 	 
+    3: never ending echo
+    1: slow fade
+    2: quick fade
+    0: custom  (this is cue 4)
+    
    
 	 
    
@@ -479,7 +597,7 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, TTFX, BeatFX,
 		4: other (=shift)
 		
     
-	M5: KEYBOARD RIGHT PGE: red button (0: NONE; 1..=8 )
+	M5: KEYBOARD RIGHT PAGE: red button (0: NONE; 1..=8 )
     	(this is used for OUT only)
 	
   
@@ -544,80 +662,91 @@ Preview player dynamics:
 REMIX DECKS PATTERN RECORDER / STEMS:
 -------------------------------------    
 
-BOME side:
-  page 1:
-    first row:   Punch 1, 2, 3, 4
-    second row:  STEM modifier
-  page 1, +SHIFT:
-    first row:   Mute   slot1..4
-    second row:  Delete slot1..4
-      
-  page 2:
-    first row:   Swing
-    second row:  Pattern Lenght
-  page 2, +SHIFT:
-    first row:   Keylock 
-    second row:  OneShoot/Loop
-      
-      
-STEM MODIFIERS:  ((GLOBAL)
-   "n9"/1 - CONFIGURE STEMS MODIFIER (use mic EQ to change) (0: enabled; : enabled)
-   "n0"/1 - which DECK  (0: none;  1: deck A; 2: deck B; 3: deck C; 4: deck D)
-   "m9"/1 - which SLOT  (0: slot1; 1: slot2; 2: slot3; 3: slot4)
-     when the variable is not used, see "n0=0"
-     
- 
-   samples: these are is sent directly to channel 8 or 10
-
-    "j0"/1 - deck select shortcut - remix decks
+  BOME side:
+    page 1:
+      first row:   Punch 1, 2, 3, 4
+      second row:  STEM modifier
+    page 1, +SHIFT:
+      first row:   Mute   slot1..4
+      second row:  Delete slot1..4
+        
+    page 2:
+      first row:   Swing
+      second row:  Pattern Lenght
+    page 2, +SHIFT:
+      first row:   Keylock 
+      second row:  OneShoot/Loop
+        
+        
+  STEM MODIFIERS:  ((GLOBAL)
+     "n9"/1 - CONFIGURE STEMS: use hardware mic EQ to change stems) (0: enabled; : enabled)
+     "n0"/1 - which DECK  (0: none;  1: deck A; 2: deck B; 3: deck C; 4: deck D)
+     "m9"/1 - which SLOT  (0: slot1; 1: slot2; 2: slot3; 3: slot4)
+       when the variable is not used, see "n0=0"
+       
    
- 
-SELECTED SAMPLE:   (PER DECK)
-   "m1"/4 - sequencer/stems  (selected sample for LEFT, slot 1..4)   
-   "m5"/4 - sequencer/stems  (selected sample for RIGHT, slot 1..4)
-   
-  
-traktor-side modifiers:
-  m7: remix decks - PATTERN RECODER TOGGLE
-    0: not running  = OFF
-    1: running, not recording = SOLID
-    2: recording = BLINK
-    3: rec paused (holding a pad to change sample) = SOLID
-    
-  MIDI:
-    regular: ch7 A7
-    +shift:  ch7 D8
-    
-  STATE MACHINE OF RECORD BUTTON:
-    A: ANY -> SHIFT -> STOP
+     samples: these are is sent directly to channel 8 or 10
 
-    B: STOP -> PRESS -> REC
-    C: RUN -> PRESS -> REC
-    D: REC -> PRESS -> RUN
-    
-    E: REC -> PAD -> HOLD 
-    F: HOLD -> RELEASE -> REC
-    
-    Z: RUN -> PAD -> RUN  (THIS IS A NOP)
-    
-update 2020-11-02:  
-   RMX entres = deck1 and 3 shortcuts
-   RMX2 enntries = deck2 and 4 real ones
+      "j0"/1 - deck select shortcut - remix decks
+     
    
-   out LED: RMX punch B 1 (led 1)
-     m7=1
-     m7=2
-     m7=3
+  SELECTED SAMPLE:   (PER DECK)
+     "m1"/4 - sequencer/stems  (selected sample for LEFT, slot 1..4)   
+     "m5"/4 - sequencer/stems  (selected sample for RIGHT, slot 1..4)
      
-   LEDS:  
-     punch: color off = 0; color ON=31  
-     timeline: 0/62
-     
-     
-   in BOME, pads are processed only for setting modifiers
-     -> action = deck_change, to automatically open deck_4
+    
+  traktor-side modifiers:
+    m7: remix decks - PATTERN RECODER TOGGLE
+      0: not running  = OFF
+      1: running, not recording = SOLID
+      2: recording = BLINK
+      3: rec paused (holding a pad to change sample) = SOLID
+      
+      
+    MIDI - sampler cue button:
+      regular: ch7 A7  (dec 105/69)
+      +shift:  ch7 D8  (dec 110/6E)
+      
+    STATE MACHINE OF RECORD BUTTON:
+      A: ANY -> SHIFT -> STOP
 
+      B: STOP -> PRESS -> REC
+      C: RUN -> PRESS -> REC
+      D: REC -> PRESS -> RUN
+      
+      E: REC -> PAD -> HOLD 
+      F: HOLD -> RELEASE -> REC
+      
+      Z: RUN -> PAD -> RUN  (THIS IS A NOP)
+      
      
+      
+  update 2020-11-02:  
+     RMX entres = deck1 and 3 shortcuts
+     RMX2 enntries = deck2 and 4 real ones
+     
+     out LED: RMX punch B 1 (led 1)
+       m7=1
+       m7=2
+       m7=3
+       
+     LEDS:  
+       punch: color off = 0; color ON=31  
+       timeline: 0/62
+       
+       
+     in BOME, pads are processed only for setting modifiers
+       -> action = deck_change, to automatically open deck_4
+
+       
+  update 2021-03-08:
+  ------------------
+     added pattern recorder to sampler cue (on shift)
+     
+     shift+press = simple press (TO REC/only PLAY)
+     shift+souble press = send shift + press (TO OFF)
+     
+       
 
 TODO from F1 and DDJ_SZ:
 ------------------------
@@ -659,6 +788,7 @@ Pioneer DDJ pad colors:
 -----------------------
 	 0: off
 	 1: blue
+   3: blue
 	 7: cyan
 	 12: cyan-blue
 	 17: green
@@ -671,17 +801,30 @@ Pioneer DDJ pad colors:
 	 36: orange
 	 38: orange
 	 40: orange-red
-   42: red
+   41: red
+   
+   45: roxa choque 
+   
 	 52: pink
-	 57: pink dark
-	 60: pink-blue
-	 62: blue
+	 58: pink dark
+	 59: violet
+	 62: dark viloet
 	 63: off
 	 64: white
 		
-	 >65: default	color for that mode
+	 >65: add 64 for the same colors, darkened
    
-   80: olive
+   76: bottle green
+   79: turquesa
+   82: bottle green
+   89:: m
+   98: dark yellow
+   113: dark 
+   115: 
+   122:
+   
+   >>>> 126: gray   
+   127: default	color for that mode
    
    
    
@@ -822,6 +965,18 @@ Jog Needle State machine:
     - cue
     - jog touch
   
+  states:
+    if yo==0 then Goto "cur_stopped"
+
+    if yo==1 then Goto "cur_playing"
+    if yo==2 then Goto "cur_cueing"
+    if yo==3 then Goto "cur_paused"
+
+    if yo==4 then Goto "cur_play_jogging"
+    if yo==5 then Goto "cur_paused_jogging"
+    if yo==6 then Goto "cur_stopped_jogging"
+  
+  
   state machine: 
     stopped -> [play] -> playing 
     playing -> [/play] -> paused 
@@ -843,8 +998,8 @@ Jog Needle State machine:
     cueing: 2
  
 
-SWALLOW - which rules apply to all inputs:
-------------------------------------------
+SWALLOW - which rules do apply to all inputs:
+---------------------------------------------
   - double click
   - long press
   - auto layout
@@ -930,7 +1085,7 @@ RESET SCREENS PROCEDURE:
     @TRAKTOR:
       send monitor state
 
-  at initialization:
+  reset at initialization:
      "hx" = 0
   
   at first press of any DDJ button:
@@ -995,10 +1150,17 @@ DDJ-SZ undocumented notes:
     ch12.CC 26 - needle marker ch3
     ch12.CC 27 - needle marker ch4
    
+    ch12.cc.004 = phase deck A
+    ch12.cc.005 = phase deck B
+    ch12.cc.006 = phase deck C
+    ch12.cc.007 = phase deck D
+    
+   
    
 selector knobs sent at reset:
 -----------------------------
   Crossfader:
+   ch1..4:
     A#0 22/16 = in Usb-A
     F1  29/1D = in thru
     C1  24/18 = in USB-B
@@ -1014,12 +1176,14 @@ selector knobs sent at reset:
     21 a0   mic
 
     22 a#0  sample
-
+    
+   
  
   beatFX selector:
    ch5 note 32..45
     
   USB select:
+   ch1..4:
     c#6 85/55  USB A
     d6 86/56   LINE
     d#6 87/57  USB B
@@ -1059,8 +1223,57 @@ midi device reset:
   below the BOME log.
 
   thank you!
-   
+  
+  
+  
+new bome version:
+-----------------
 
+  restrat traktor
+
+  restart bome (all)
+  restart bome red button
+
+
+  remove usb:
+    1487885 - 0.18:3 closed_ddj_out
+    1487886 - 0.17:4 closed_ddj_in
+    1487886 - 0.12:3 unplugged_ddj_out
+    1487886 - 0.11:4 unplugged_ddj_in
+
+  plug usb:
+    1631813 - 0.15:3 opened_ddj_out
+    1631815 - 0.14:4 opened_ddj_in
+    1634840 - 0.17:4 closed_ddj_in
+    1634840 - 0.20:4 open_error_ddj_in  
+    1634841 - 0.14:4 opened_ddj_in
+
+    
+    
+    
+  power off ddj
+  swap cable (same port)
+  swap cable (other port)
+
+  conclusion:
+    windows:
+      ddj_in error -> restart ddj_out
+    mac:
+      new leds ok
+      old leds are lost because optimization 
+      ddj_in open -> reset @ 10seconds
+     
+  lost reset messages:
+    issue:
+    - fader or crossfader messages did get lost
+   
+    solution:
+    - reset DDJ
+    - reset TK @ 50ms
+    - reset BOME @ 150ms
+    
+     
+     
 
     
 NEW TIMERS:
@@ -1104,11 +1317,13 @@ NEW CLOCKS and BLINK METHODS:
   variables:  
     "g0" - master t_blink       counts to 16, 125ms, period 2 seconds
     
-    "zx" - very slow - 0.5 blink per second  - slip, play
-    "zy" - slow      - 1 blinks second       - cue
-    "zw" - fast      - 2 blinks second       - jogring, sync
-    "zz" - very fast - 4 blinks per second   - jogring, sync
-
+    "zx" - very slow - 0.5 full blinper second   - nothing
+    "zy" - slow      - 1 full blink second       - cue, play
+    "zw" - fast      - 2 full blink second       - everyting else
+    "zz" - very fast - 4 full blinks per second  - jogring (now DEAD)
+    
+    
+    
 
   about leds and blinks:
     All blinking leds are fully managed inside BOME. This includes in some cases the shifted version.
@@ -1243,6 +1458,21 @@ PHASE FEATURE:
   50 --> 0
   100 -> +10
   
+  TK IN phase          CC "85" -> "je"
+
+  -0.1 - 0
+  -0.09 - 1
+  -0.08 - 2
+  
+  -0.01 - 9
+      0 - 10
+   0.01 - 11
+  -0.02 - 12
+  -0.10 - 20
+  
+  
+  
+
   
 DECK IS LOADED TRIGGER:
 --------------------
@@ -1253,10 +1483,14 @@ DECK IS LOADED TRIGGER:
      deck D:  c#5 73 / 49 / d#8
  
  TK IN loaded: channel 16 
-     note 0,1,2,3  
+     note 0,1,2,3    (note: this is a copy)
+  
   
  This message is sent twice because of overflow issues!
   
+ note2: variables have alredy been condensed in "ks"/4. 
+ This is being latched for the time being.
+ 
   
   
 CCs messages sent FROM traktor TO BOME:
@@ -1319,6 +1553,7 @@ Tempo range enlarger:
     119 "B8" - enlarger: tempo range Reset to 6%
     96: "C7" - enlarge:  next tempo range    (stantard shift+master tempo)
   
+  15
   
 Soft Takeover:
 --------------
@@ -1360,7 +1595,6 @@ Jog Ring (End warning):
   TK IN volume fader   CC "83" -> "jo" 
   DDJ IN volume fader:  ch1..4 CC 19+51  -> "jo"  (0..16553 = position)
   
-  TK IN phase          CC "85" -> "je"
 
   TK IN jogFX state    ch5 CC "126" -> "z9"   (this could be a single variable)    (THIS IS IN PAGE #1!)
   
@@ -1368,12 +1602,22 @@ Jog Ring (End warning):
   ______ todo: why /4 bpm ????  <<<<<<<<<<<<<<<<<<
   
   
-CLOCK IMPLEMENTARION:
----------------------
+BOME CLOCK:
+-----------
+   "JM"/1 - preview bome clock duration (
+   state: reconfiguring clock:  "k9"     
+  
+  
+  
+SEEK IMPLEMENTARION:
+--------------------
+ AUTO-RESET:
+   auto reset - DDJ side  "hx"     (0=init; 1= done DDJ reset)
+   auto reset - TK side   "yn"     (0=init; 1= done TK reset)
+  
  CLOCK:
-   Need reset when device is up "hx"   (global)   (0=init; 1= done reset)
    clock period (milliseconds):   "hy"   (global)
-      reconfigure clock timeout:  "k9"     
+   frames per second:  "jn"
    
    master debug             "hw"   (global)
    current clock value:     "hz"   (global)
@@ -1795,27 +2039,100 @@ DENON HC4500 INFO:
   mapping overview: https://www.bax-shop.nl/downloads/downloads/NI-TRAKTOR_DN-HC4500%20ConfigurationManualpdf.pdf
   
 
+   
+S11 smooth echo:
+----------------
+  crossfader, hotcue, silent cue
+  channel dader, gate cue, load
+  
+  number of beats to trigger: 1/2
+  number of beats to trigger (crossfader): 
+  
+  demo: https://youtu.be/_Sp47QU6pyw?t=1073
+
+  ////////////////
+  sampler cue:
+   - press: ON/OFF toggle ("mn" swap)
+   - double click: SET ENTER/EXIT ("mm" swap)
+   - shift+cue = disabe everything
+  
+  "gx"/1 - smooth echo: TYPE  (echo or vinyl break)
+  
+  "zm" - smooth echo: CONFIG: FADER 
+    0: do nothing
+    1: do echo
+  
+  "zn" - smooth echo: CONFIG: CROSSFADER
+    0: do nothing
+    1: do echo
+ 
+  "mm" - SMOOTH ECHO: CONFIG: JOG/HOTCUE 
+    0 - DO NOTHING
+    1 - ENTER: dry_wet;   EXIT: cancel
+    2 - ENTER: cancel;    EXIT: feedback
+  
+   
+   "mn" - SMOOTH ECHO: ACTIVE
+    0: disabled (but can still do cancels)
+    1: enabled
+
+    
+    
+  "m0" free   - SETUP: duration of EXIT out (TBD - To be done)
+
+  
+  "i0"/1 - SUBROUTINE: echo_out command
+    << note: there is no "disabled". because this is a function call >>
+    0 = cancel
+    1 = dry wet
+    2 = feedback
+    
+    99 = error
+  
+
+  "jo"/4 - real fader volume
+  
+  
+  on "press reset" -> Safe cancel
+  on "press off" -> Real volume send
+  
+  
+  crossfader positions:
+     0  10  50  90  100
+      0  echo_B
+      10 cancel_B
+      50 cancel_A
+      90 echo_A
+  
+  
   
 releaseFX - echo out (on censor):
 ---------------------------------
-  "i0"/1 - echo out in progress  (0: none; 1: channel 1; 2: channel 2; etc)
 
-  IN: 78 note f#5  - echo out 
-     step 1: channel 1..4    (127)
-     step 2: channel 5 only  (127)
-`    step 3: G5 79 (channel 5) (HOLD STYLE)
-     
+  NEW IN:  
+     step 0:  ch5  F#5 (78)
+       select echo effect
+       routing off
+
+       WAIT 50 MS
+       
+     step 1:  ch1..4  F#5 (78)
+       set routing
+       
+     step 2: ch5 G5 (79)
+       set M8 parameters 
+
+     step 3: ch5   G#5  (80)
+       set backfill  (HOLD)
+
+     step 4:  ch5  A5   (81)
+       unit 3 ON  (HOLD)
+       store preset
+       
+       
   OUT: CC 69 (unit3 state)
   
-  methods:
-    pad8:
-      press -> always toggle.
-    censor:
-      1 press -> toggle if enabled; ignore if disabled
-      long press -> censor
-      2 press -> always toggle
-   
-   
+ 
    
 BACKWARDS LOOPS:
 ----------------
@@ -1828,7 +2145,7 @@ BACKWARDS LOOPS:
     shift1  d7 (98)
 
   unknown:   
-    10 A#-1  - loop 1/2x
+    10 A#-1  - loop 1/2x   (DDJ-SZ adaptor)
     13 C#0   - loop 2x
  
   ----------------
@@ -1863,6 +2180,65 @@ BACKWARDS LOOPS:
   new modifier:
    m4: nothing
    
+   
+continuous seeking:
+-------------------
+  actions:
+    shift0 - beatjump of that size
+    shift1 - 1 beat
+    shift2 - select size
+    shift3 - next track
+ 
+  SUMMARY: when pressed, it sends "LONG". 
+    When released quickly it ADDITIONALLY sends "QUICK".
+ 
+  arrow LEFT:
+    long:  E8 112/70   
+    quick: A#6 94/5E   (== REIG BORG)
+    
+    shift: A5 81/51
+    
+
+  arrow RIGHT:
+    long:  F8 113/71
+    quick: B6 95/5F   (== REIG BORG)
+    
+    shift: B5 83/53
+    
+  
+  
+  DDJ-1000 tap:
+    1180974 - MIDI IN [DDJ-1000]: 91 71 7F (press)
+    
+    1181060 - MIDI IN [DDJ-1000]: 91 71 00 (release)
+    1181060 - MIDI IN [DDJ-1000]: 91 5F 7F (<<< in addition)
+    1181060 - MIDI IN [DDJ-1000]: 91 5F 00
+
+  DDJ-1000 long:
+    1271459 - MIDI IN [DDJ-1000]: 91 71 7F (long press)
+    
+    1272983 - MIDI IN [DDJ-1000]: 91 71 00 (release)
+  
+  first implementation:
+    ddj long press -> beatjump, move by +1, etc
+   
+  second implementation:
+    ddj long press  -> first beatjump / loop move same
+    bome long press -> send same message repeatedly (if configured)
+    release = done
+  
+  ------
+    e8 = beatjump/loop move combo
+    a#6 = always beatjump (reigborg mode)
+    a5 = shift1
+
+
+  "nm"/1 - ARROW CONTINUOUS SEARCH  (0: no continuos search; 1: continuous search)
+  "nn"/1 - ARROW IGNORE LOOP  (0: loop move if active; 1: always beatjump (for reigborg: )
+
+  "ym"/1 - DEFAULT 4-beat/8-beat
+
+   
     
 UNUSED VARIABLES (both "/1" and "/4"):
 --------------------------------------
@@ -1883,29 +2259,40 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "gi"/4  USB/line real USB
   "gs"/4  USB remember fader level
   
-  "gx"/4  free
+  "gx"/4  SPECIAL
+    "gx"/1  smooth echo: TYPE  (0: echo; 1: vinyl break)
+    "gy"/1  beatFX - real ON/OFF button state
+    "gw"/1  free
+    "gz"/1  free
   
   
   *****
-    "h0"/1  beatFX - real ON/OFF button state
-    "h9"/1  beatFX - which deck selected:
-    "hm"/1 - FREE
-    "hn"/1 - FREE
+    "h0"/1  free
+    "h9"/1  beatFX - which deck selected
+    "hm"/1 - blink coalesce
+    "hn"/1 - blink slowdown master
 
   "h5"/4  Advanced panel 
   
   "hi"/_4  SPECIAL GESTURES support 
   "hx"/_4  SPECIAL GROUP: Timers / INIT
 
+     "hx"  auto reset - DDJ side  
+     "hy"  clock period (milliseconds)
+     "hw"  master debug          
+     "hz"  current clock value
+     
+     "jn"  frames per second:  "jn"
+   
   
   *****   
-    "i0"/1 - Channel for echo out
+    "i0"/1 - SMOOTH ECHO: subroutine action type
     "i9"/1 - external monitor cue 
     "im"/1 - used by layout 
     "in"/1 - CFX buttons are blinking            (was fran martin lock jog - BAD!) <<<<<<<<<<<<<
     
     
-  "ie"/4  (double click per deck -> 4 separate variables)
+  "ie"/4  (double click per deck -> these are 4 separate variables all related to double_clik)
   "ii"/4  SPECIAL: active deck firmware bugfixes -> 4 separate variables
   
   "io"/4 tempo range automatic enlarger    (0: nothing; 1: next iteration; 2:waiting) 
@@ -1916,8 +2303,8 @@ UNUSED VARIABLES (both "/1" and "/4"):
     "J0"/1 - deck select - remix decks 
     "J9"/1 - DDJ-1000 mode; 1: DDJ-SX2 mode (internal); 2: DDJ-SZ mode (external)
 
-    "JM"/1 - FREE
-    "JN"/1 - FREE
+    "JM"/1 - preview bome clock duration
+    "JN"/1 - BOME FPS - Frames Per Second
   
   "J1"/4 - CFX related
   "J5"/4 - CFX related  
@@ -1934,10 +2321,10 @@ UNUSED VARIABLES (both "/1" and "/4"):
   *****
     "k0"/1 - TTFX enabled  0: disabled; 50 = 500ms;  100 = 1 second (1 second)
     "k9"/1 - Clock Timer config
-    "km"/1 - FREE
-    "kn"/1 - FREE
+    "km"/1 - mouse injection X
+    "kn"/1 - mouse injection Y
  
-  "ko"/4 vinyl mode
+  "ko"/4  vinyl mode
   "ke"/4  flux (AKA slip)
   "ki"/4  Reverse 
   "kx"/4  Previewing after changing loop values  (0: none; 1: loop/move; 2: tempo range)
@@ -1946,8 +2333,8 @@ UNUSED VARIABLES (both "/1" and "/4"):
   *****
     "l0"/1  Global: mode elastic beatgrid
     "l9"/1  16x filters configuration OFF/ON
-    "lm"/1 - FREE
-    "ln"/1 - FREE
+    "lm"/1 - TEST GLOBAL - DO NOT USE - ONLY FOR TEMPRARY TESTS
+    "ln"/1 - config: dual deck
  
   "l5"/4  filter polarity  
   "la"/4  "sync" off/ON
@@ -1961,10 +2348,10 @@ UNUSED VARIABLES (both "/1" and "/4"):
 
   
   *****   
-    "m0"/1 - FREE
+    "m0"/1 - SMOOTH ECHO
     "m9"/1 - sequencer/stems
-    "mm"/1 - FREE
-    "mn"/1 - FREE
+    "mm"/1 - SMOOTH ECHO
+    "mn"/1 - SMOOTH ECHO
   
   "m1"/4 - sequencer/stems  (selected sample for LEFT, slot 1..4)   
   "m5"/4 - sequencer/stems  (selected sample for RIGHT, slot 1..4)
@@ -1980,8 +2367,8 @@ UNUSED VARIABLES (both "/1" and "/4"):
   ***** HC-4500
     "n0"/1 - USED BY STEMS 
     "n9"/1 - USED BY STEMS 
-    "nm"/1 - FREE
-    "nn"/1 - FREE
+    "nm"/1 - ARROW CONTINUOUS SEARCH  (0: no continus search; 1: continuous search)
+    "nn"/1 - ARROW IGNORE LOOP  (0: loop move if active; 1: always beatjump (for reigborg: )
           
   "na"/4  NEW POSITION (range: 0..1000)
   "ne"/4  HC4500 minutes
@@ -1994,8 +2381,8 @@ UNUSED VARIABLES (both "/1" and "/4"):
   *****
     "y0"/1 - MIXER_FX reconfigure lock
     "y9"/1 - MIXER_FX buttons lock 
-    "ym"/1 - FREE
-    "yn"/1 - FREE
+    "ym"/1 - DEFAULT 4-beat/8-beat
+    "yn"/1 - AUTO RESET (tk side)
   
   "y1"/4  MIXERFX mouse selection
   "y5"/4  JOG NEEDLE
@@ -2007,8 +2394,8 @@ UNUSED VARIABLES (both "/1" and "/4"):
   *****
     "z0"/1 - OPERATING SYSTEM CONFIG: 0: Windows; 1: MacOS
     "z9"/1 - JogFX state   (this is global for all decks)
-    "zm"/1 - FREE
-    "zn"/1 - FREE
+    "zm"/1 - smooth echo
+    "zn"/1 - smooth echo
  
   "za"/4  time mode elapsed/remain 
   "ze"/4  FREE 
@@ -2053,7 +2440,7 @@ layout deck shift:
   
   "ik"/1 - PC APP CONNECT TIMER (disables forced side because of auto-detect)
     
-  "il"/1:  AUTO LAYOUT feature
+  "il"/1:  AUTO-LAYOUT ENABLED?
     0: DISABLED 
        (=Constant layout)
        Double click active; shift+deck ctive
@@ -2064,10 +2451,10 @@ layout deck shift:
   
   "im"/1 - CURRENT LAYOUT. This is read on the init phase. 
     0: init
-    1: auto, 2D P
-    2: auto, 4D P
-    3: auto, 2D C
-    4: auto, 4D C
+    1: auto, 2D Parallel
+    2: auto, 4D Paralell
+    3: auto, 2D Classic
+    4: auto, 4D Classic
     5: preparation
   
     
@@ -2087,6 +2474,11 @@ layout deck shift:
   shift_deck = turn on again auto
   
 
+  update march 2021:
+  ------------------
+    firmware 1.12 sends:
+      93 72 (= 114 dec / F#8)  (this is deck select)
+      93 3C (= 60 dec / C4)    (this is new in 1.12. It tells the new selected deck on the correct channel)
   
   
 Generic Double click support:
@@ -2100,11 +2492,9 @@ Generic Double click support:
   
 Generic long press support:
 -------------------
-  "hi"/_4
-
-  "hi" - long press: current state  (0- nothing; 1 - waiting for long press)
-  "hj" - long press: which channel
-  "hk" - FREE
+  "hi" - long press: current state  (0- nothing; 1 - waiting for first trigger; 2 - waiting for second trigger)
+  "hj" - long press: which CHANNEL
+  "hk" - long press: FREE
   "hl" - long press: which NOTE
   
       
@@ -2127,9 +2517,12 @@ c) deck is playing, but flux OFF:
    received from DDJ:
       B-1: filter out if its playing
       B-1 invert: filter out always
+      
+----------------      
     
     step_1: sends C#7 (97) (normal)
       activates FX 
+      set TTFX
       dry wet 100%
 
       wait 400ms
@@ -2420,8 +2813,31 @@ traktor remote control by BOME:
     
     
     
-  
-    
+pressing shift:  
+  1: MIDI IN [DDJ-1000]: 91 3F 7F
+  2: MIDI IN [DDJ-1000]: 96 7B 7F   <<<<< unknown
+
+shift+jog platter turn  (Vinyl mode=ON):
+
+  1: MIDI IN [DDJ-1000]: 91 3F 7F
+  2: MIDI IN [DDJ-1000]: 96 7B 7F
+  3: MIDI IN [DDJ-1000]: 91 67 7F
+  4: MIDI IN [DDJ-1000]: 96 7B 00
+
+  5: MIDI IN [DDJ-1000]: 91 79 7F    <<<< unknown
+  6: MIDI IN [DDJ-1000]: B1 1F 41
+  7: MIDI IN [DDJ-1000]: B1 1F 41
+  ...
+  68: MIDI IN [DDJ-1000]: B1 1F 41
+  71: MIDI IN [DDJ-1000]: B1 1F 3F
+  72: MIDI IN [DDJ-1000]: 91 67 00
+  73: MIDI IN [DDJ-1000]: 91 79 00
+  74: MIDI IN [DDJ-1000]: 91 0A 7F    <<<<<<< unknown
+
+
+
+
+
 
 
 Channel 1..4 FREE NOTES (TK IN):
@@ -2430,7 +2846,7 @@ Channel 1..4 FREE NOTES (TK IN):
     to generate this file: 
     cat ddj-1000\ notes\ low\ channels.txt  | egrep "^NOTE" | awk '{print $2}' | sed 's|/|\n|g' | sort -un | awk 'BEGIN{a=0} {   while(a<$1){print a; a = a +1;}; a = $1 + 1}'
 
-    10 "A#-1"  - loop 1/2x
+    10 "A#-1"  - loop 1/2x  (DDJ-SZ adaptor)
     13 "C#0"   - loop 2x
     
     14 "d0"  LOOP IN  long press   (NEW)
@@ -2445,7 +2861,7 @@ Channel 1..4 FREE NOTES (TK IN):
     55
     58
     59
-    60 "C4"
+    60 "C4"  -> deck select firmwave 1.12 NEW!
     65
     69
     75
@@ -2469,7 +2885,7 @@ Channel 1..4 FREE NOTES (TK IN):
         ("C7" = tempo range cycle up - as originally made by Pioneer)
    119 "B8" - enlarger: tempo Reset to 6%
    120 "C9" - previous track  (standard = E8)
-   121 "C#9" - next track     (standard = F8)
+   121 "C#9" - next track     (standard = F8)   (update fw 1.2: this is sent as well on shift+jog)
    
    122 - STANDARD - page ">" 
    123 - STANDARD
@@ -2619,13 +3035,13 @@ Channel 1..4 FREE CCs (TK IN):
    111: INST DOUBLES - FROM "C" to this deck
    112: INST DOUBLES - FROM "D" to this deck
         
-      92: MOVE SIZE (IN, direct)
+     92: POLY MOVE SIZE (IN, direct)
 
-   113: Loop size + Set    DIRECT
-   114: Loop size selector DIRECT
-   115: Loop active ON/OFF
-   116: 
-   
+     113: POLY Loop size + Set    DIRECT
+     114: POLY Loop size selector DIRECT
+     115: POLY Loop active ON/OFF
+     116: FREE
+     
    
    117: STEM FILTER - relative slot1
    118: STEM FILTER - relative slot2
@@ -2750,10 +3166,12 @@ Channel 5 Free notes (TK IN):
   70
   76
   77
-  78  f#5 channel 5 - echo out step 2
-  79  g5  channel 5 - echo out step 3 (HOLD on/off)
-  80
-  81
+ 
+  78  f#5 channel 5 - ECHO OUT STEP 0
+  79  g5  channel 5 - ECHO OUT STEP 2
+  80  g#5 channel 5 - ECHO OUT STEP 3
+  81  a5  channel 5 - ECHO OUT STEP 4
+  
   82
   83
   84
@@ -2941,6 +3359,16 @@ Applescript inject mouse clicks:
     
   if you are a macOS developer and want to help, please contact me.
   
+
+    "z0"/1 - OPERATING SYSTEM CONFIG: 0: Windows; 1: MacOS
+
+    "km"/1 - mouse injection X - location of preferences window
+    "kn"/1 - mouse injection Y - location of preferences window
+
+    
+
+    
+
   
   
 Cross-Channel Compilation:
@@ -2972,6 +3400,65 @@ Cross-Channel Compilation:
   CHANNEL >5 messages:
     $ bome_analyse_project.sh -hc 
 
+    
+    
+    
+Timer coalescing template:
+--------------------------
+      
+  ////////////////////////
+  // coalescing support:
+  // xx: 0 = no blinking; 1 = blinking
+  xx=0
+
+
+
+  /////////////////
+  // BLINK TEMPLATE FOLLOWS
+  /////////////////
+  Label "do_blink_very_slow"
+  xx=1
+  if zx==0 then Goto "show_solid_on"
+  Goto "show_solid_off"
+
+  Label "do_blink_slow"
+  xx=1
+  if zy==0 then Goto "show_solid_on"
+  Goto "show_solid_off"
+
+  Label "do_blink_fast"
+  xx=1
+  if zw==0 then Goto "show_solid_on"
+  Goto "show_solid_off"
+
+  Label "do_blink_veryfast"
+  xx=1
+  if zz==0 then Goto "show_solid_on"
+  Goto "show_solid_off"
+
+
+  ////////
+  Label "show_solid_off"
+  pp=0
+  Goto "end"
+
+  Label "show_solid_on"
+  pp=127
+  Goto "end"
+
+
+  ///////////////////////////
+  Label "end"
+
+  ////////////////////
+  // blink coalescing support
+
+  // are we blinking?
+  if xx==1 then exit rules, execute Outgoing Action
+  // did we wake up by a button?
+  if hm==1 then exit rules, execute Outgoing Action
+  // else
+  exit rules, skip Outgoing Action
     
     
     

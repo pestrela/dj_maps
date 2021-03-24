@@ -1,6 +1,7 @@
 CHANGELOG - SUMMARY:
 --------------------
-  - v7.3.0 - DDJ-1000 - Huge performance jump in MacOS. Central pad configuration.
+  - v7.4.0 - DDJ-1000 - Smooth Echo, Dual deck, Polyrhythmic loops.
+  - v7.3.0 - DDJ-1000 - Huge performance jump in MacOS. Central pad configuration
   - v7.2.0 - DDJ-1000 - Advanced features shipped OFF, better MacOS Performance and reorderd Pad modes
   - v7.1.0 - DDJ-1000 - Reliability and performance improvements
   - v7.0.0 - DDJ-1000 - Mapping remade from scratch. 16x SuperKnobs, STEMS, Remix recorder, TTFX, Tempo range 
@@ -22,16 +23,76 @@ CHANGELOG - SUMMARY:
 KNOWN ISSUES:
 -------------
  (Note: these issues refer to the latest versions of the mapping, Traktor and Bome)
- 
- - Bome: "auto start with OS" is ignored on importing the setting. 
-   - Workaround: set it by hand instead
- - Mapping: Deck 3&4 lack timestamps 
- - Trakor: Its impossible to set 9x mixerFX in macOS
 
+ Known issues - FX units:
+  - there are limitations on FX units. Do NOT use jogFX and smooth echo at same time!
+  - do not use use vinyl break with resonant filter at the same time!
+  - using smooth echo fader - use one fader at the time
+  - turntable FX needs to "warm-up" for several beats before working.
+  
+ Known issues:
+  - arrow 1-beat ignores "always beatjump mode (=no loops)"  
+  - Bome: "auto start with OS" is ignored on importing the setting  (workaround: set it by manually)
+  - Mapping: Deck 3&4 lack timestamps 
+  - Trakor: Its impossible to set 9x mixerFX in macOS
+  
 
    
 MAPPING CHANGELOG:
-----------------------------
+------------------
+- v7.4.0 DDJ-1000 - March 2021 - "DJM-S11 smooth echo, SX2 DualDecks, CDJ-3000 polyloops"
+
+v7.4 adds three major new features: Smooth echo like the S11; a Dual deck like the S11/SX2; 
+Polyrhythmic loops like the CDJ-3000. The USB cable can now be swapped at will.
+
+- Major features:
+  - Smooth echo:
+    - Description:  sends an echo out or a vinyl break when cutting the track with the fader, crossfader, jog or hotcue. 
+    - This was copied from the DJM-S11. This feature is still in beta, there are limitations (see known issues)
+    - To enable and configure: use the on the pads (shift+deck_1/page 2)
+    - "sampler cue": toggle active ON/OFF
+    - double click "sampler cue": change echo out / vinyl break (button will blink differently)
+    
+  - Dual deck:
+    - controls two decks like the SX2 and S11.
+    - enable on the pads (deck 1/page 2)
+    - Try using a rhythym on deck 1 and an acapella in deck 3
+    
+  - PolyRythimic loops 
+    - odd-sized lengths like the CDJ-3000 (3/4 beat, 3/2 beat, etc)
+
+- Pattern recorder:
+  - shift+sampler cue: toggle Record/Play sequencer
+  - double-click shift+sampler cue: Stop player
+  
+- Performance / GUI:
+  - bome clock is now measured in Frames per second (FPS) instead of MilliSeconds
+  - double-click "deck select" now manually swaps 2/4 decks; 
+  - "shift+deck_select" swaps parallel/classic waveforms
+  - moved pad pages around. Added beatloops to mode 7; Moved slicer to mode8 page2 (use page arrows to select what is triggered on mode 8 button)
+  
+- Beatjump:
+  - Arrow: new config option to continuously seek in the track (using beatjumps to keep sync)
+  - Arrow: new config option to beatjump even when a loop is active
+  - Double click "memory" to set default move to 8 beats
+ 
+- Stability:
+  - added device stability using bome 1.8.5 beta. Windows: DDJ in error -> restart out; Mac: open DDJ -> reset TK
+  - reset procedure is now slower to avoid losing fader positions
+  - auto-reset is now done when traktor sends first message as well (before was only on first DDJ message)
+  
+- Internal:
+  - fixes for latest firmware 1.12
+  - debug is now only possible in development mode
+  - moved OUT entries to page 1 to improve lost messages (more info: https://forum.bome.com/t/what-is-the-limit-of-the-bmt-devices/1788)
+  - several messages delayed to avoid disturbing 14bit messages 
+  - "is loaded" is now latched (more info: https://www.native-instruments.com/forum/threads/replacing-a-normal-track-with-a-stem-track-confuses-deck-is-loaded-out-midi.434965/)
+  - tested new method for 9x mixerFX for mac. This is still currently disabled 
+  - applescript delayed to avoid "engine queue overflow"
+  
+  
+ 
+ 
 - v7.3.0 DDJ-1000 - December 2020 - "The huge macOS performance jump"
 
 Major topics is a huge jump in macOS Catalina performance, a central re-configuration via the pads, 
@@ -42,7 +103,7 @@ There were also smaller improvements and bug fixes (see list below)
 - Major:
   - Performance:
     - Significant performance increase for macOS catalina (other OS versions were not tested)
-    - This was done by botbh sending less messages and by avoiding back-to-back messages 
+    - This was done by both sending less messages and by avoiding back-to-back messages 
     - Default bome clock is now 30 for both MAC and PC
   - Mapping Re-Configuration:
     - "Deck A HotCue page 2" is now a central configuration page. 
@@ -50,7 +111,7 @@ There were also smaller improvements and bug fixes (see list below)
   - Bome clock customization:
     - New state added to change the bome clock without using 2 hands.
     - Enter the bome clock change mode using the config pads or pressing browse encoder (with shift+memory)
-    - Inside tbe new mode, the current clock value will now blink. Simply turn the encoder to 
+    - Inside the new mode, the current clock value will now blink. Simply turn the encoder to change it
   - TTFX:
     - The value displayed in the traktor screen now matches the knob position
     - Delay is now exponential, and was raised to maximum 2 seconds
@@ -71,7 +132,7 @@ There were also smaller improvements and bug fixes (see list below)
     - compiler now generates all 4 decks in a single go
     - "deck is loaded" message is sent earlier + twice, to avoid drops. Drops can still happen, however.
   - Scratching:
-    - Touching the jog for scracthing shows "C" besides turning off the jog ring.
+    - Touching the jog for scratching shows "C" besides turning off the jog ring.
   - Jogwheel:
     - tuning the jog on the side when deck is paused now moves the needle as well
   - Startup / Reset cases:
@@ -95,9 +156,9 @@ There were also smaller improvements and bug fixes (see list below)
    - Advanced features: 
      - All automatic advanced features are now shipped DISABLED by default. 
      - This is to avoid confusing users.
-     - To enable them, press "shift+memory+button". To change make this permantely, change the config file (slide 4 of the manual)
+     - To enable them, press "shift+memory+button". To change make this permanently, change the config file (slide 4 of the manual)
     - Performance: 
-     - significant performance increase when scrathing, especially on old Macs. 
+     - significant performance increase when scratching, especially on old Macs. 
      - v7.2 tests were done on a Mac from 2012: 2.5Ghz dual core i5 / 8 Gb DDR3 / macOS catalina 10.15.6
      - v6.8 tests were done in a Mac from 2010: 2.5Ghz dual core i5 / 6 Gb DDR3 / macOS High Sierra 10.13.6
      
@@ -110,7 +171,7 @@ There were also smaller improvements and bug fixes (see list below)
    - Documentation - now fairly simpler. New structure:
      - Quick start: 8 slides
      - Manual: 87 slides
-     - Refence: 5 slides
+     - Reference: 5 slides
      - Video Walktrough: 6 pages
      - Installation guide and FAQ
      
@@ -125,7 +186,7 @@ There were also smaller improvements and bug fixes (see list below)
    - Startup / Reset cases:
      - Crossfader selector is now read properly at startup and reset 
      - BeatFX selector is now read properly at startup and reset
-   - auto enlarger:
+   - Auto enlarger:
      - soft takeover blink still happens when auto enlarge is DISABLED
      - crossing the zero point now also blinks "sync", to warn that range is now 6%
    - 16x filters:
@@ -234,7 +295,7 @@ There were also smaller improvements and bug fixes (see list below)
     - Preview player: (routed to deck 4 on external mode, with safety)
   
  
-- v6.6.0 DDJ-1000 - September 2019 - "the CDJ edition"
+- v6.6.0 DDJ-1000 - October 2019 - "the CDJ edition"
   - Short summary:
      - CDJ-like features (loop IN/OUT, loop adjust, cue/Play blink, warning blink)
      - new manual beatjump shortcut. Includes "move me by one beat". 

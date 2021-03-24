@@ -385,6 +385,12 @@ XDJ-XZ-specific modifiers:
       m8=7 FAKE effect list = to delete
       on XDJ-XZ: mapped to __CUE/LOOP MEMORY__
 
+      
+XDJ-RX2 compatibility:
+---------------------- 
+   RX1  - pads in channel 1..4 (avoiding colisions!)
+   RX2 - same as XDJ-XZ
+   RR  - same as XDJ-XZ  
   
 Pioneer DDJ pad colors:
 -----------------------
@@ -413,6 +419,23 @@ Pioneer DDJ pad colors:
 		
 	 >65: default	color for that mode
 	 
+   
+Pioneer DDJ ch level meter:
+---------------------------
+  (color, db, CC)
+  Red 12 109
+  Amber 9 104
+  Amber 6 99
+  Amber 3 94
+  Amber 0 89
+  Green -3 84
+  Green -6 79
+  Green -9 75
+  Green -12 70
+  Green -15 65
+  Green -18 60
+  Green -24 50
+   
 	 
 	 
 JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
@@ -520,7 +543,7 @@ MIXER-FX midi codes:  all on ch7
 		
 DDJ-1000 beatFX MIDI codes:
 ---------------------------
-	beat <:     ch5 d5/F#7   (was tap)
+	beat <:     ch5 d5/F#7  (was tap)
 	beat >:     ch5 d#5/B7  (new)
 	FX select:  ch5 G#1 ..a2  
 	FX routing: ch5 E0/F0/f#0/g0
@@ -611,36 +634,36 @@ DDJ-SZ MIDI codes:
 		SLICER        G#1
 		SAMPLER       A#1
 		
-		CUE_LOOP      A7         (MFX)
-		SAVED_LOOP    B7         (PadFX)
-		SLICER_LOOP   C#8        (JogFX)
+		CUE_LOOP      A7         
+		SAVED_LOOP    B7         
+		SLICER_LOOP   C#8        
 		VEL_SAMPLER   D#8  
 
 		(quantitize)  A#7
 	
 
 	"<"  (ch 1..4)
-		C2   (HOTCUE)
-		C#2  (ROLL)
-		D2   (SLICER)
-		D#2  (SAMPLER)
+		C2   (MODE1)
+		C#2  (MODE2)
+		D2   (MODE3)
+		D#2  (MODE4)
 		
-		E2   (CUE_LOOP)
-		F2   (SAVED_LOOP)
-		F#2  (SLICER_LOOP)
-		G2   (VEL_SAMPLER)
+		E2   (MODE5)
+		F2   (MODE6)
+		F#2  (MODE7)
+		G2   (MODE8)
 
 		
 	">"  (ch 1..4)
 		G#2  (in HC)
 		a2   (in roll)
-		a#2  (in slicer)
+		a#2  (in beatjump)
 		B2   (in sampler)
 		
-		C3   (CUE_LOOP)
-		C#3  (SAVED_LOOP)
-		D3   (SLICER_LOOP)
-		D#3  (SLICER_LOOP)
+		C3   
+		C#3  
+		D3   
+		D#3 
 	
 	
 	
@@ -1057,4 +1080,63 @@ How to force a certain sequence of events / sequential processing:
   
   
     
+how to do traktor videos - update 2021: 
+---------------------------------------
+
+tutorial:
+  https://github.com/pestrela/dj_kb#how-i-edited-my-videos-showing-the-traktor-screen
+  
+example:
+  https://www.youtube.com/watch?v=p3L21hdQbzY&list=PLIlvTGzSxI0XHlFyINdT6P42noqvkPISD&index=5
+  
+shortcuts:
+  F6: low resolutinn
+  left: move to keyframe
+  CTRL+R: transform
+  properties:
+    green: at keyframe
+    blue: interpolated
+
+Step 1: Shocut:
+ - PROJECT size: 1080 x 810  (4:3 format)
+   - Text bar: 1080 x 110    (for text)
+     - yellow: DDJ-1000 TP3 Mapping v7.4
+     - green: www.djestrela.com
+   - traktor view: 1080 x 350 
+   - camera view: 1080 x 350
+     - filter: size and crop
+     - filter: corner pin  (https://forum.shotcut.org/t/perspective-filter/19785)
+ - audio: align
+   - stop audio from track 2!
+ - export
+ 
+step 2: Shocut / Openshot:
+ - edit video in time (slice). To remove mistakes etc
+ - add constant text at top-right corner (djestrela.com)
+ - add "arrows" to show things around
+ ...
+
+
+ to add titles:
+   CTRL+T
+   template: standard 1
+   delete line2
+   edir line 1
+   change font: arial, 20, bold
+   foreground color: green
+   background:  alpha channel 0   <<<<<
+   project files: RMB, add to timeline
+   CTRL+R, move to required place
+   
+   
+   
+step 3: windows movie maker
+ ....
     
+
+
+
+
+
+   
+   

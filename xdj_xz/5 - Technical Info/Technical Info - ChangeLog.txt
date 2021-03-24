@@ -1,7 +1,16 @@
 
 XDJ-XZ ChangeLog
 
-6.1.10 - October 2020
+6.2.2 - January 2021
+  - Pressing loop buttons changed GUI waveforms from parallel back to classic 
+  - loop increase/decrease were swapped
+  - Raised bome clock to 50 to reduce ghosting
+  
+  - Moved non-bome map to "all devices"
+  - Merged Mac and PC versions again. 
+  
+
+6.2.0 - October 2020
   - fixed right screen needle did not turn ("Blend")
   - fixed several issues with bome alias
   - Created seperate settings for MacOS and Windows  

@@ -1,0 +1,433 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[MIDI.routes]
+In0=From Traktor
+In1=From Traktor
+In2=From DDJ 1
+In3=From DDJ 2
+Out0=To DDJ 1
+Out1=To DDJ 2
+Out2=To Traktor
+Out3=To Traktor
+
+[Preset.0]
+Active=1
+Comments=
+Incoming0=EnDi02
+Incoming1=None
+Incoming10=Tim0TimT000Cmaster_clock
+Incoming2=Tim0TimT000Bglobal_init
+Incoming3=Tim0TimT000Dglobal_init_b
+Incoming4=None
+Incoming5=Tim0TimT0012reset_master_clock
+Incoming6=None
+Incoming7=None
+Incoming8=None
+Incoming9=None
+Name=INIT
+Name0=OPEN PROJECT
+Name1=------
+Name10=CLOCK TICK
+Name2=Set Global Variables - ZERO
+Name3=Set Global Variables - defaults
+Name4=------
+Name5=START CLOCK PROCESS
+Name6=------
+Name7=------
+Name8=------
+Name9=------
+Options0=Actv01Stop00OutO00
+Options1=Actv00Stop00OutO00
+Options10=Actv01Stop00OutO00StMa00000001hz=hz+1
+Options2=Actv01Stop00OutO00StMa00000169label0006__cmt>g0=0g1=0g2=0g3=0g4=0g5=0g6=0g7=0g8=0g9=0ga=0gb=0gc=0gd=0ge=0gf=0gg=0gh=0gi=0gj=0gk=0gl=0gm=0gn=0go=0gp=0gq=0gr=0gs=0gt=0gu=0gv=0gw=0gx=0gy=0gz=0h0=0h1=0h2=0h3=0h4=0h5=0h6=0h7=0h8=0h9=0ha=0hb=0hc=0hd=0he=0hf=0hg=0hh=0hi=0hj=0hk=0hl=0hm=0hn=0ho=0hp=0hq=0hr=0hs=0ht=0hu=0hv=0hw=0hx=0hy=0hz=0i0=0i1=0i2=0i3=0i4=0i5=0i6=0i7=0i8=0i9=0ia=0ib=0ic=0id=0ie=0if=0ig=0ih=0ii=0ij=0ik=0il=0im=0in=0io=0ip=0iq=0ir=0is=0it=0iu=0iv=0iw=0ix=0iy=0iz=0j0=0j1=0j2=0j3=0j4=0j5=0j6=0j7=0j8=0j9=0ja=0jb=0jc=0jd=0je=0jf=0jg=0jh=0ji=0jj=0jk=0jl=0jm=0jn=0jo=0jp=0jq=0jr=0js=0jt=0ju=0jv=0jw=0jx=0jy=0jz=0k0=0k1=0k2=0k3=0k4=0k5=0k6=0k7=0k8=0k9=0ka=0kb=0kc=0kd=0ke=0kf=0kg=0kh=0ki=0kj=0kk=0kl=0km=0kn=0ko=0kp=0kq=0kr=0ks=0kt=0ku=0kv=0kw=0kx=0ky=0kz=0l0=0l1=0l2=0l3=0l4=0l5=0l6=0l7=0l8=0l9=0la=0lb=0lc=0ld=0le=0lf=0lg=0lh=0li=0lj=0lk=0ll=0lm=0ln=0lo=0lp=0lq=0lr=0ls=0lt=0lu=0lv=0lw=0lx=0ly=0lz=0m0=0m1=0m2=0m3=0m4=0m5=0m6=0m7=0m8=0m9=0ma=0mb=0mc=0md=0me=0mf=0mg=0mh=0mi=0mj=0mk=0ml=0mm=0mn=0mo=0mp=0mq=0mr=0ms=0mt=0mu=0mv=0mw=0mx=0my=0mz=0n0=0n1=0n2=0n3=0n4=0n5=0n6=0n7=0n8=0n9=0na=0nb=0nc=0nd=0ne=0nf=0ng=0nh=0ni=0nj=0nk=0nl=0nm=0nn=0no=0np=0nq=0nr=0ns=0nt=0nu=0nv=0nw=0nx=0ny=0nz=0y0=0y1=0y2=0y3=0y4=0y5=0y6=0y7=0y8=0y9=0ya=0yb=0yc=0yd=0ye=0yf=0yg=0yh=0yi=0yj=0yk=0yl=0ym=0yn=0yo=0yp=0yq=0yr=0ys=0yt=0yu=0yv=0yw=0yx=0yy=0yz=0z0=0z1=0z2=0z3=0z4=0z5=0z6=0z7=0z8=0z9=0za=0zb=0zc=0zd=0ze=0zf=0zg=0zh=0zi=0zj=0zk=0zl=0zm=0zn=0zo=0zp=0zq=0zr=0zs=0zt=0zu=0zv=0zw=0zx=0zy=0zz=0
+Options3=Actv01Stop00OutO00StMa0000002Flabel0017__cmt>/// bpm & tempo Ag1=0g5=1label0006__cmt>h1=120h5=1label0006__cmt>i1=10i5=1label0006__cmt>label0017__cmt>/// bpm & tempo Bg2=0g6=1label0006__cmt>h2=120h6=1label0006__cmt>i2=10i6=1label0006__cmt>label0006__cmt>label0012__cmt>///// needlelabel000D__cmt>// prevy1=0label000C__cmt>// degz1=0label0006__cmt>label001E__cmt>/// locks for 30ms inputht=0hs=0he=0hf=0hw=0label0006__cmt>label0006__cmt>label0013__cmt>/// seek calcia=0ib=0label0006__cmt>label0006__cmt>label0017__cmt>//jog touch blockko=127kp=127label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Options4=Actv00Stop00OutO00
+Options5=Actv01Stop00OutO00
+Options6=Actv00Stop00OutO00
+Options7=Actv00Stop00OutO00
+Options8=Actv00Stop00OutO00
+Options9=Actv00Stop00OutO00
+Outgoing0=Tim0TimS000Bglobal_init1:0:1
+Outgoing1=None
+Outgoing10=None
+Outgoing2=Tim0TimS000Dglobal_init_b1:0:1
+Outgoing3=Tim0TimS0015global_init_set_clock1:0:1
+Outgoing4=None
+Outgoing5=Tim0TimS000Cmaster_clock0:0:hy
+Outgoing6=None
+Outgoing7=None
+Outgoing8=None
+Outgoing9=None
+PresetSwitchIgnore=0
+
+[Preset.1]
+Active=0
+Comments=
+Name=------
+PresetSwitchIgnore=0
+
+[Preset.2]
+Active=1
+Comments=
+Incoming0=None
+Incoming1=Tim0TimT0015global_init_set_clock
+Incoming2=None
+Incoming3=None
+Name=CONFIGURATION - CLOCK SPEED
+Name0=------
+Name1=Set Global Variables - defaults
+Name2=------
+Name3=------
+Options0=Actv00Stop00OutO00
+Options1=Actv01Stop00OutO00StMa00000006label002A__cmt>// BOME clock period in millisecondslabel0008__cmt>//label0034__cmt>// Change this value if the needle is not goodlabel001E__cmt>// and then restart BOMElabel0006__cmt>hy=50
+Options2=Actv00Stop00OutO00
+Options3=Actv00Stop00OutO00
+Outgoing0=None
+Outgoing1=Tim0TimS0012reset_master_clock1:0:1
+Outgoing2=None
+Outgoing3=None
+PresetSwitchIgnore=0
+
+[Preset.3]
+Active=0
+Comments=
+Name=------
+PresetSwitchIgnore=0
+
+[Preset.4]
+Active=0
+Comments=
+Name=------
+PresetSwitchIgnore=0
+
+[Preset.5]
+Active=1
+Comments=
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00020008To DDJ 20008To DDJ 1
+Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOff"><Channel num="0" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4F"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x44"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming14=None
+Incoming15=None
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="NoteOff"><Channel num="6"/><Value1 num="0x46"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="6"/><Value1 num="0x46"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming18=None
+Incoming19=Tim0TimT000Bcalc_state1
+Incoming2=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="32" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming20=Tim0TimT000Crefresh_cue1
+Incoming21=Tim0TimT000Crefresh_cue1
+Incoming22=Tim0TimT000Crefresh_cue1
+Incoming23=None
+Incoming24=None
+Incoming25=None
+Incoming26=None
+Incoming3=Tim0TimT000Bjog_touch_1
+Incoming4=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming5=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x23"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming6=None
+Incoming7=Tim0TimT000Cmaster_clock
+Incoming8=Tim0TimT000Crefresh_jog1
+Incoming9=None
+Name=NEEDLE CH1
+Name0=DDJ IN - Toggle Vinyl DOWN
+Name1=DDJ IN - Toggle Vinyl UP
+Name10=TK IN - HOTCUE
+Name11=TK IN - CUE
+Name12=TK IN - PLAY/PAUSE
+Name13=TK IN - JOG TOUCH
+Name14=-------
+Name15=-------
+Name16=TK IN - LOADED ON
+Name17=TK IN - LOADED OFF
+Name18=-------
+Name19=CALC STATE
+Name2=DDJ IN - JOG TOUCH pt1
+Name20=REFRESH  jog
+Name21=NEEDLE MARKER SEND
+Name22=HIDE SCREENS
+Name23=-----------
+Name24=-----------
+Name25=-----------
+Name26=-----------
+Name3=DDJ IN - JOG TOUCH pt2
+Name4=DDJ IN - JOG TURN #34
+Name5=DDJ IN - JOG TURN #35
+Name6=-----
+Name7=JOG TURN timer
+Name8=DDJ OUT - NEEDLE SEND
+Name9=-----------
+Options0=Actv00Stop00OutO00StMa00000006oo=koif(oo==0)ko=127if(oo!=0)ko=0label0006__cmt>label0006__cmt>pp=ko
+Options1=Actv00Stop00OutO00
+Options10=Actv01Stop00OutO00StMa00000007if(pp==0)goto000Freleased_hotcuelabel0006__cmt>label000Epressed_hotcuelabel0006__cmt>y5=z5label0006__cmt>label000Freleased_hotcue
+Options11=Actv01Stop00OutO00StMa00000001z1=pp
+Options12=Actv01Stop00OutO00StMa00000002zo=pplabel0006__cmt>
+Options13=Actv01Stop00OutO00StMa00000002zs=pplabel0006__cmt>
+Options14=Actv00Stop00OutO00
+Options15=Actv00Stop00OutO00
+Options16=Actv01Stop00OutO01StMa00000003label002C__cmt>// deck loaded: A#4 / C5      B4 / C#5label0006__cmt>ks=pp
+Options17=Actv01Stop00OutO01StMa00000003label002C__cmt>// deck loaded: A#4 / C5      B4 / C#5label0006__cmt>ks=pp
+Options18=Actv00Stop00OutO00
+Options19=Actv01Stop00OutO00StMa000000B5label0034__cmt>// TODO: channels are #2, but variables are #1label002D__cmt>//  copy paste. On #1, change channels.label0025__cmt>//  on #2 change variable nameslabel0006__cmt>label0006__cmt>label0016__cmt>// IN PLAY  "zo"label0016__cmt>// IN CUE:  "z1"label001A__cmt>// IN JOGTOUCH: "zs"label0006__cmt>label001C__cmt>// CURRENT STATE: "yo"label001A__cmt>// NEEDLE FWD?  "xx"label0006__cmt>label002A__cmt>// OUT    "y5"    360 degree  NEEDLElabel0030__cmt>// OUT    "z5"    360 degree  CUE_POSITIONlabel000F__cmt>/////////label0006__cmt>label0006__cmt>label0023__cmt>// what is the current state?if(yo==0)goto000Bcur_stoppedif(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingif(yo==3)goto000Acur_pausedlabel0006__cmt>if(yo==4)goto0010cur_play_joggingif(yo==5)goto0012cur_paused_joggingif(yo==6)goto0013cur_stopped_jogginggoto0005ERRORlabel0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  NORMAL STATESlabel0016__cmt>////////////////label0006__cmt>label000A__cmt>////label000Bcur_stoppedif(zo==1)yo=1if(z1==1)yo=2if(zs==1)yo=6goto0003endlabel0006__cmt>label000C__cmt>//////label000Bcur_playingif(z1==1)goto0013playing_pressed_cueif(zo==0)goto0015playing_pressed_pauseif(zs==1)goto0013playing_pressed_joggoto0003endlabel0006__cmt>label0013playing_pressed_cuelabel0016__cmt>// move to fronty5=z5yo=0goto0003endlabel0006__cmt>label0013playing_pressed_jogyo=4goto0003endlabel0006__cmt>label0015playing_pressed_pauseyo=3goto0003endlabel0006__cmt>label000C__cmt>//////label000Acur_pausedif(z1==1)goto0012paused_pressed_cueif(zo==1)goto0013paused_pressed_playif(zs==1)goto0012paused_pressed_joggoto0003endlabel0006__cmt>label0012paused_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0013paused_pressed_playyo=1goto0003endlabel0006__cmt>label0012paused_pressed_jogyo=5goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000C__cmt>//////label000Acur_cueingif(z1==0)goto0013cueing_released_cuelabel0045__cmt>///if zs==1 then goto "cueing_pressed_jog"  // not implemented!goto0003endlabel0006__cmt>label0013cueing_released_cuelabel0015__cmt>//move to fronty5=z5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  JOGING STATESlabel0016__cmt>////////////////label0010cur_play_joggingif(zs==0)goto0019play_jogging_released_jogif(z1==1)goto0018play_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019play_jogging_released_jogyo=1goto0003endlabel0006__cmt>label0018play_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5label0021__cmt>// yo=0   /// NOT CHANGE !!goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0013cur_stopped_joggingif(zs==0)goto0019stop_jogging_released_jogif(z1==1)goto0018stop_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019stop_jogging_released_jogyo=3goto0003endlabel0006__cmt>label0018stop_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0012cur_paused_joggingif(zs==0)goto001Apause_jogging_released_jogif(z1==1)goto0019pause_jogging_pressed_cuegoto0003endlabel0006__cmt>label001Apause_jogging_released_jogyo=3goto0003endlabel0006__cmt>label0019pause_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0010__cmt>//////////label0003endlabel0006__cmt>label001F__cmt>// Below is just to debuglabel002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0017__cmt>// show new stateif(yo==0)goto000Bnow_stoppedif(yo==1)goto000Bnow_playingif(yo==2)goto000Anow_cueingif(yo==3)goto000Anow_pausedlabel0006__cmt>if(yo==4)goto0010now_play_joggingif(yo==5)goto0012now_paused_joggingif(yo==6)goto0013now_stopped_jogginggoto0005ERRORlabel0006__cmt>label000Bnow_stoppedlabel000Bnow_playinglabel000Anow_cueinglabel000Anow_pausedlabel0006__cmt>label0010now_play_jogginglabel0012now_paused_jogginglabel0013now_stopped_jogging
+Options2=Actv00Stop00OutO00
+Options20=Actv01Stop00OutO00StMa00000002if(ks==0)noexecutelabel0006__cmt>
+Options21=Actv01Stop00OutO00Dlay5:MillisStMa00000004if(ks==0)noexecutelabel0006__cmt>oo=z5label0006__cmt>
+Options22=Actv00Stop00OutO00StMa0000000Cif(ks==0)goto0008unloadedif(ks>0)goto0006loadedlabel0006__cmt>label0008unloadedoo=127goto0003endlabel0006__cmt>label0006loadedoo=0goto0003endlabel0006__cmt>label0003end
+Options23=Actv00Stop00OutO00
+Options24=Actv00Stop00OutO00
+Options25=Actv00Stop00OutO00
+Options26=Actv00Stop00OutO00
+Options3=Actv00Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(ko==0)noexecute
+Options4=Actv01Stop00OutO01StMa00000031label0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label001E__cmt>// force vinyl "ON" caseko=127label0006__cmt>label0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label0042__cmt>// IMPORTANT: "jogging" comes from traktor itself. Thats whylabel0006__cmt>if(yo==0)goto000Bcur_stoppedif(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingif(yo==3)goto000Acur_pausedlabel0006__cmt>if(yo==4)goto0010cur_play_joggingif(yo==5)goto0012cur_paused_joggingif(yo==6)goto0013cur_stopped_jogginglabel0006__cmt>noexecutelabel0006__cmt>label0006__cmt>label0010cur_play_jogginglabel0013cur_stopped_jogginglabel0012cur_paused_jogginglabel0006__cmt>label0030__cmt>// normalize to -16..+16, accumulate in yspp=pp-64ys=ys+pplabel0006__cmt>label000A__cmt>////oo=36label0006__cmt>tt=ys/oorr=ys%ooys=rrlabel0006__cmt>y5=y5+tty5=y5%360if(y5<0)y5=y5+360label0006__cmt>label0006__cmt>label0003endlabel000Bcur_stoppedlabel000Bcur_playinglabel000Acur_cueinglabel000Acur_pausedlabel0006__cmt>
+Options5=Actv01Stop00OutO01StMa00000003label0006__cmt>label001F__cmt>// force vinyl "OFF" caseko=0
+Options6=Actv00Stop00OutO00
+Options7=Actv01Stop00OutO00StMa00000017label0061__cmt>// flag: do we need a refresh? yes if we accumulated jog turn, or if time has moved forwardpp=0label0006__cmt>label0023__cmt>// what is the current state?if(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingnoexecutelabel0006__cmt>label000B__cmt>/////label000Bcur_playinglabel000Acur_cueinglabel0006__cmt>label0023__cmt>// scale: 1 deg per each 10mslabel0036__cmt>// this needs to account to 360 deg per 4 beats!label0006__cmt>oo=hyoo=oo/5label0006__cmt>y5=y5+ooy5=y5%360if(y5<0)y5=y5+360label0006__cmt>label0003end
+Options8=Actv01Stop00OutO00StMa00000004label0037__cmt>// if ks==0 then exit rules, skip Outgoing Actionlabel0006__cmt>label0006__cmt>oo=y5
+Options9=Actv00Stop00OutO00
+Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
+Outgoing1=None
+Outgoing10=Tim0TimS000Bcalc_state11:10:1
+Outgoing11=Tim0TimS000Bcalc_state11:10:1
+Outgoing12=Tim0TimS000Bcalc_state11:10:1
+Outgoing13=Tim0TimS000Bcalc_state11:10:1
+Outgoing14=None
+Outgoing15=None
+Outgoing16=Tim0TimS000Bcalc_state11:10:1
+Outgoing17=Tim0TimS000Bcalc_state11:10:1
+Outgoing18=None
+Outgoing19=Tim0TimS000Crefresh_cue11:0:1
+Outgoing2=Tim0TimS000Bjog_touch_11:0:1
+Outgoing20=Tim0TimS000Crefresh_jog11:0:1
+Outgoing21=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="11"/><Value1 num="0x04"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing22=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing23=None
+Outgoing24=None
+Outgoing25=None
+Outgoing26=None
+Outgoing3=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x20"/><Value2 num="0x7F"/></Simple></Outgoing>
+Outgoing4=Tim0TimS000Crefresh_jog11:0:1
+Outgoing5=Tim0TimS000Crefresh_jog11:0:1
+Outgoing6=None
+Outgoing7=Tim0TimS000Crefresh_jog11:0:1
+Outgoing8=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="11"/><Value1 num="0x00"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing9=None
+PresetSwitchIgnore=0
+
+[Preset.6]
+Active=0
+Comments=
+Name=--------
+PresetSwitchIgnore=0
+
+[Preset.7]
+Active=1
+Comments=
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00020008To DDJ 20008To DDJ 1
+Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOff"><Channel num="1" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4F"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x44"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4D"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming14=None
+Incoming15=None
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="NoteOff"><Channel num="6"/><Value1 num="0x47"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="6"/><Value1 num="0x47"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming18=None
+Incoming19=Tim0TimT000Bcalc_state2
+Incoming2=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="32" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Incoming20=Tim0TimT000Crefresh_cue2
+Incoming21=Tim0TimT000Crefresh_cue2
+Incoming22=Tim0TimT000Crefresh_cue2
+Incoming23=None
+Incoming24=None
+Incoming25=None
+Incoming26=None
+Incoming3=Tim0TimT000Bjog_touch_2
+Incoming4=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming5=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x23"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming6=None
+Incoming7=Tim0TimT000Cmaster_clock
+Incoming8=Tim0TimT000Crefresh_jog2
+Incoming9=None
+Name=NEEDLE CH2
+Name0=DDJ IN - Toggle Vinyl DOWN
+Name1=DDJ IN - Toggle Vinyl UP
+Name10=TK IN - HOTCUE
+Name11=TK IN - CUE
+Name12=TK IN - PLAY/PAUSE
+Name13=TK IN - JOG TOUCH
+Name14=---------
+Name15=---------
+Name16=TK LOADED ON
+Name17=LOADED OFF
+Name18=
+Name19=CALC STATE
+Name2=DDJ IN - JOG TOUCH pt1
+Name20=REFRESH  jog
+Name21=NEEDLE MARKER SEND
+Name22=HIDE SCREENS
+Name23=-----------
+Name24=-----------
+Name25=-----------
+Name26=-----------
+Name3=DDJ IN - JOG TOUCH pt2
+Name4=DDJ IN - JOG TURN #34
+Name5=DDJ IN - JOG TURN #35
+Name6=-----
+Name7=JOG TURN timer
+Name8=DDJ OUT - NEEDLE SEND 
+Name9=-----------
+Options0=Actv00Stop00OutO00StMa00000005oo=kpif(oo==0)kp=127if(oo!=0)kp=0label0006__cmt>pp=kp
+Options1=Actv00Stop00OutO00
+Options10=Actv01Stop00OutO00StMa00000007if(pp==0)goto000Freleased_hotcuelabel0006__cmt>label000Epressed_hotcuelabel0006__cmt>y6=z6label0006__cmt>label000Freleased_hotcue
+Options11=Actv01Stop00OutO00StMa00000001z2=pp
+Options12=Actv01Stop00OutO00StMa00000002zp=pplabel0006__cmt>
+Options13=Actv01Stop00OutO00StMa00000002zt=pplabel0006__cmt>
+Options14=Actv00Stop00OutO01
+Options15=Actv00Stop00OutO01
+Options16=Actv01Stop00OutO01StMa00000003label002C__cmt>// deck loaded: A#4 / C5      B4 / C#5label0006__cmt>kt=pp
+Options17=Actv01Stop00OutO01StMa00000003label002C__cmt>// deck loaded: A#4 / C5      B4 / C#5label0006__cmt>kt=pp
+Options18=Actv00Stop00OutO00
+Options19=Actv01Stop00OutO00StMa000000B3label0034__cmt>// TODO: channels are #2, but variables are #1label002D__cmt>//  copy paste. On #1, change channels.label0025__cmt>//  on #2 change variable nameslabel0006__cmt>label0016__cmt>// IN load: "ko"label0016__cmt>// IN PLAY  "zo"label0016__cmt>// IN CUE:  "z1"label001A__cmt>// IN JOGTOUCH: "zs"label0006__cmt>label001C__cmt>// CURRENT STATE: "yo"label001A__cmt>// NEEDLE FWD?  "xx"label0006__cmt>label002A__cmt>// OUT    "y5"    360 degree  NEEDLElabel0030__cmt>// OUT    "z5"    360 degree  CUE_POSITIONlabel000F__cmt>/////////label0006__cmt>label0006__cmt>label0023__cmt>// what is the current state?if(yp==0)goto000Bcur_stoppedif(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingif(yp==3)goto000Acur_pausedlabel0006__cmt>if(yp==4)goto0010cur_play_joggingif(yp==5)goto0012cur_paused_joggingif(yp==6)goto0013cur_stopped_jogginggoto0005ERRORlabel0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  NORMAL STATESlabel0016__cmt>////////////////label0006__cmt>label000A__cmt>////label000Bcur_stoppedif(zp==1)yp=1if(z2==1)yp=2if(zt==1)yp=6goto0003endlabel0006__cmt>label000C__cmt>//////label000Bcur_playingif(z2==1)goto0013playing_pressed_cueif(zp==0)goto0015playing_pressed_pauseif(zt==1)goto0013playing_pressed_joggoto0003endlabel0006__cmt>label0013playing_pressed_cuelabel0016__cmt>// move to fronty6=z6yp=0goto0003endlabel0006__cmt>label0013playing_pressed_jogyp=4goto0003endlabel0006__cmt>label0015playing_pressed_pauseyp=3goto0003endlabel0006__cmt>label000C__cmt>//////label000Acur_pausedif(z2==1)goto0012paused_pressed_cueif(zp==1)goto0013paused_pressed_playif(zt==1)goto0012paused_pressed_joggoto0003endlabel0006__cmt>label0012paused_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0013paused_pressed_playyp=1goto0003endlabel0006__cmt>label0012paused_pressed_jogyp=5goto0003endlabel0006__cmt>label0006__cmt>label000C__cmt>//////label000Acur_cueingif(z2==0)goto0013cueing_released_cuelabel0045__cmt>///if zt==1 then goto "cueing_pressed_jog"  // not implemented!goto0003endlabel0006__cmt>label0013cueing_released_cuelabel0015__cmt>//move to fronty6=z6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  JOGING STATESlabel0016__cmt>////////////////label0010cur_play_joggingif(zt==0)goto0019play_jogging_released_jogif(z2==1)goto0018play_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019play_jogging_released_jogyp=1goto0003endlabel0006__cmt>label0018play_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6label0021__cmt>// yp=0   /// NOT CHANGE !!goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0013cur_stopped_joggingif(zt==0)goto0019stop_jogging_released_jogif(z2==1)goto0018stop_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019stop_jogging_released_jogyp=3goto0003endlabel0006__cmt>label0018stop_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0012cur_paused_joggingif(zt==0)goto001Apause_jogging_released_jogif(z2==1)goto0019pause_jogging_pressed_cuegoto0003endlabel0006__cmt>label001Apause_jogging_released_jogyp=3goto0003endlabel0006__cmt>label0019pause_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0010__cmt>//////////label0003endlabel0006__cmt>label001F__cmt>// Below is just to debuglabel002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0006__cmt>label0017__cmt>// show new stateif(yp==0)goto000Bnow_stoppedif(yp==1)goto000Bnow_playingif(yp==2)goto000Anow_cueingif(yp==3)goto000Anow_pausedif(yp==4)goto0010now_play_joggingif(yp==5)goto0012now_paused_joggingif(yp==6)goto0013now_stopped_jogginggoto0005ERRORlabel0006__cmt>label000Bnow_stoppedlabel000Bnow_playinglabel000Anow_cueinglabel000Anow_pausedlabel0010now_play_jogginglabel0012now_paused_jogginglabel0013now_stopped_jogging
+Options2=Actv00Stop00OutO00
+Options20=Actv01Stop00OutO00StMa00000001if(kt==0)noexecute
+Options21=Actv01Stop00OutO00Dlay5:MillisStMa00000004if(kt==0)noexecutelabel0006__cmt>oo=z6label0006__cmt>
+Options22=Actv00Stop00OutO00StMa0000000Dif(kt==0)goto0008unloadedif(kt>0)goto0006loadedlabel0006__cmt>label0008unloadedoo=127goto0003endlabel0006__cmt>label0006loadedoo=0goto0003endlabel0006__cmt>label0006__cmt>label0003end
+Options23=Actv00Stop00OutO00
+Options24=Actv00Stop00OutO00
+Options25=Actv00Stop00OutO00
+Options26=Actv00Stop00OutO00
+Options3=Actv00Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(kp==0)noexecute
+Options4=Actv01Stop00OutO01StMa0000002Clabel0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label001E__cmt>// force vinyl "ON" casekp=127label0006__cmt>label0006__cmt>if(yp==0)goto000Bcur_stoppedif(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingif(yp==3)goto000Acur_pausedlabel0006__cmt>if(yp==4)goto0010cur_play_joggingif(yp==5)goto0012cur_paused_joggingif(yp==6)goto0013cur_stopped_jogginglabel0006__cmt>noexecutelabel0006__cmt>label0006__cmt>label0010cur_play_jogginglabel0013cur_stopped_jogginglabel0012cur_paused_jogginglabel0006__cmt>label0030__cmt>// normalize to -16..+16, accumulate in yspp=pp-64yt=yt+pplabel0006__cmt>label000A__cmt>////oo=36label0006__cmt>tt=yt/oorr=yt%ooyt=rrlabel0006__cmt>y6=y6+tty6=y6%360if(y6<0)y6=y6+360label0006__cmt>label0006__cmt>label0003endlabel000Bcur_stoppedlabel000Bcur_playinglabel000Acur_cueinglabel000Acur_paused
+Options5=Actv01Stop00OutO01StMa00000003label0006__cmt>label001F__cmt>// force vinyl "OFF" casekp=0
+Options6=Actv00Stop00OutO00
+Options7=Actv01Stop00OutO00StMa0000001Alabel0061__cmt>// flag: do we need a refresh? yes if we accumulated jog turn, or if time has moved forwardpp=0label0006__cmt>label0023__cmt>// what is the current state?if(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingnoexecutelabel0006__cmt>label000B__cmt>/////label000Bcur_playinglabel000Acur_cueinglabel0006__cmt>label0023__cmt>// scale: 1 deg per each 10mslabel0036__cmt>// this needs to account to 360 deg per 4 beats!label0006__cmt>oo=hyoo=oo/5label0006__cmt>label004C__cmt>// This ignores slip mode. New variables need to enter to support thatif(kj>0)oo=oo*-1label0006__cmt>y6=y6+ooy6=y6%360if(y6<0)y6=y6+360label0006__cmt>label0003end
+Options8=Actv01Stop00OutO00StMa00000003label0036__cmt>//if kt==0 then exit rules, skip Outgoing Actionlabel0006__cmt>oo=y6
+Options9=Actv00Stop00OutO00
+Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
+Outgoing1=None
+Outgoing10=Tim0TimS000Bcalc_state21:10:1
+Outgoing11=Tim0TimS000Bcalc_state21:10:1
+Outgoing12=Tim0TimS000Bcalc_state21:10:1
+Outgoing13=Tim0TimS000Bcalc_state21:10:1
+Outgoing14=None
+Outgoing15=None
+Outgoing16=Tim0TimS000Bcalc_state21:10:1
+Outgoing17=Tim0TimS000Bcalc_state21:10:1
+Outgoing18=None
+Outgoing19=Tim0TimS000Crefresh_cue21:0:1
+Outgoing2=Tim0TimS000Bjog_touch_21:0:1
+Outgoing20=Tim0TimS000Crefresh_jog21:0:1
+Outgoing21=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="11"/><Value1 num="0x05"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing22=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5D"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing23=None
+Outgoing24=None
+Outgoing25=None
+Outgoing26=None
+Outgoing3=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x20"/><Value2 num="0x7F"/></Simple></Outgoing>
+Outgoing4=Tim0TimS000Crefresh_jog21:0:1
+Outgoing5=Tim0TimS000Crefresh_jog21:0:1
+Outgoing6=None
+Outgoing7=Tim0TimS000Crefresh_jog21:0:1
+Outgoing8=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="11"/><Value1 num="0x01"/><Value2 var="oo"/></Simple></Outgoing>
+Outgoing9=None
+PresetSwitchIgnore=0
+
+[Preset.8]
+Active=0
+Comments=
+Name=--------
+PresetSwitchIgnore=0
+
+[Preset.9]
+Active=0
+Comments=
+Incoming0=KAM10000KSQ10006011010041241210211
+Incoming1=None
+Incoming10=None
+Incoming11=KAM10000KSQ10006011010058258210211
+Incoming12=KAM10000KSQ10006011010043243210211
+Incoming13=KAM10000KSQ10006011010056256211210
+Incoming14=KAM10000KSQ10006011010053253210211
+Incoming15=None
+Incoming2=KAM10000KSQ1000601101005A25A210211
+Incoming3=Tim0TimT000Fstop_all_clocks
+Incoming4=Tim0TimT000Fstop_all_clocks
+Incoming5=Tim0TimT000Fstop_all_clocks
+Incoming6=Tim0TimT000Fstop_all_clocks
+Incoming7=Tim0TimT000Fstop_all_clocks
+Incoming8=Tim0TimT000Fstop_all_clocks
+Incoming9=None
+Name=DEBUG CLOCK
+Name0=RESTART PROJECT
+Name1=------
+Name10=------
+Name11=START CLOCK - very fast
+Name12=START CLOCK - medium
+Name13=START CLOCK - very slow
+Name14=TOGGLE DEBUG
+Name15=------
+Name2=STOP CLOCK
+Name3=STOP CLOCK
+Name4=STOP CLOCK
+Name5=STOP CLOCK
+Name6=STOP CLOCK
+Name7=STOP CLOCK
+Name8=STOP CLOCK
+Name9=------
+Options0=Actv00Stop00OutO00
+Options1=Actv00Stop00OutO00
+Options10=Actv00Stop00OutO00
+Options11=Actv01Stop00OutO00StMa00000002label0015__cmt>// 10 ms periodhy=10
+Options12=Actv01Stop00OutO00StMa00000003label0016__cmt>// 333 ms periodhy=333label000F__cmt>// hy=100
+Options13=Actv01Stop00OutO00StMa00000003label0017__cmt>// 1000 ms periodhy=1000label0006__cmt>
+Options14=Actv01Stop00OutO00StMa0000000Dif(hw==1)goto0007disableif(hw==0)goto0006enablegoto0006enablelabel0006__cmt>label0006enablehw=1goto0003endlabel0006__cmt>label0007disablehw=0goto0003endlabel0006__cmt>label0003end
+Options15=Actv01Stop00OutO00
+Options2=Actv01Stop00OutO00
+Options3=Actv01Stop00OutO00
+Options4=Actv01Stop00OutO00
+Options5=Actv01Stop00OutO00
+Options6=Actv01Stop00OutO00
+Options7=Actv01Stop00OutO00
+Options8=Actv01Stop00OutO00
+Options9=Actv00Stop00OutO00
+Outgoing0=Tim0TimS000Bglobal_init1:0:1
+Outgoing1=None
+Outgoing10=None
+Outgoing11=Tim0TimS0012reset_master_clock1:0:1
+Outgoing12=Tim0TimS0012reset_master_clock1:0:1
+Outgoing13=Tim0TimS0012reset_master_clock1:0:1
+Outgoing14=None
+Outgoing15=None
+Outgoing2=Tim0TimS000Fstop_all_clocks1:0:1
+Outgoing3=Tim0TimK000Cmaster_clock
+Outgoing4=Tim0TimK0008t_blink1
+Outgoing5=Tim0TimK0008t_blink2
+Outgoing6=Tim0TimK0009jog_ring1
+Outgoing7=Tim0TimK0009jog_ring2
+Outgoing8=Tim0TimK000Cmaster_clock
+Outgoing9=None
+PresetSwitchIgnore=0
+
+[Project]
+Author=Pedro Estrela
+AuthorContact=pedro.estrela@gmail.com
+AuthorCopyright=Pedro Estrela
+AuthorWWW=www.djestrela.com
+Comments=DDJ-1000 screens implemeted in BOME.\nSee technical info on file "BOME implementation notes.txt".\nSee the technical discussion on the DJTT forum: http://forum.djtechtools.com/showthread.php?t=96024\n
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00020008To DDJ 10008To DDJ 2
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=ykKIS4snKGeiWNxuRsajfq99yQmOXR5TNMT6LlDHl9j1yohNxEWx1CNVqUKRc6X6hxj0YkjPCAW29hVYFRUfdyiFZs85aq2Pp0qRSNpZJ2OdNSA7Kn8IN64+VCfqRBMTIycFOW/YgJ2fat+XVpLFId3pGDuUfj91M2DtWtFCfPE=
+SignedBy-1=Pedro Estrela
+

@@ -1,0 +1,148 @@
+[AliasWindow]
+Width=308
+WidthSingle=250
+Height=304
+
+[Current]
+DontShowSaveInfo=Y
+ColumnWidthOptions=150
+PresetInstallVersion=1.8.4.962
+ShowSplashScreen=N
+DontAskForClose=Y
+ColumnWidthIn=210
+ColumnWidthName=150
+MainMaximized=N
+ProjectPanelWidth=150
+AutoStart=Y
+MainLeft=124
+DontAskForDeleteTranslator=Y
+DoNotShowLoggerWarning=Y
+OneInstance=Y
+VirtualMidiShortNames=N
+MainHeight=880
+MainWidth=1401
+StartMinimized=Y
+DontShowSaveNoPortsWarning=Y
+VirtualMidiPortsCount=1
+ShowLoggerForm=Y
+MainEditorPanelWidth=449
+DontAskForDeletePreset=Y
+CurrentVersion=1.8.4.962
+ColumnWidthOut=210
+MainTop=77
+EventMonitor=Y
+MainLTabPanelHeight=366
+EditWindowIndex=2
+VirtualMidiPorts=Y
+ShowEditWindow=Y
+FirstTime=0
+
+[EditWindow]
+IsDefaultMidiPortsProjectOptions=Y
+IsRulesWizardExpanded=Y
+IsGeneralPresetOptions=Y
+IsGeneralOptions=N
+IsDefaultMidiPortsPresetOptions=Y
+TranslatorRow=6
+ScrollPosPresetEditor=0
+IsRulesOptions=Y
+IsGeneralProjectOptions=N
+ScrollPosProjectEditor=166
+ScrollPosTranslatorEditor=0
+PresetRow=3
+SizeTranslatorRulesEditor=559
+SizeProjectRouter=237
+MidiRouterShowOpenOnly=Y
+ExpandAppleScriptProjectOptions=N
+IsOutgoingOptions=Y
+IsMidiRouterProjectOptions=Y
+IsIncomingOptions=N
+
+[ErrorWindow]
+Width=450
+IsDialog=N
+Top=400
+Left=735
+Height=280
+
+[EventWindow]
+Width=558
+MonitorStarted=N
+IsDialog=N
+Top=344
+Left=561
+Height=363
+
+[LogWindow]
+LogMidiOut=N
+Height=363
+LogOut=N
+Left=681
+LogIn=N
+Timestamps=N
+LogRules=N
+LogMidiIn=N
+LoggerStarted=Y
+Top=359
+Width=558
+IsDialog=N
+
+[MIDI.alias]
+Name0=From Traktor
+Device0=1:Bome MIDI Translator 1 Virtual In
+Name1=To Traktor
+Device1=2:Bome MIDI Translator 1 Virtual Out
+Name2=From DDJ 1
+Device2=1:XDJ-XZ (2)
+Name3=To DDJ 1
+Device3=2:XDJ-XZ (2)
+Name4=To DDJ 2
+Device4=2:XDJ-XZ (1)
+Name5=From DDJ 2
+Device5=1:XDJ-XZ (1)
+
+[MIDI.in]
+Name0=XDJ-XZ (2)
+Options0=FTFF4944494DT
+Name1=XDJ-XZ (1)
+Options1=FTFF4944494DT
+Name2=Bome MIDI Translator 1 Virtual In
+Options2=FTTF44494D42T
+
+[MIDI.out]
+Name0=XDJ-XZ (2)
+Options0=FF4944494DT
+Name1=XDJ-XZ (1)
+Options1=FF4944494DT
+Name2=Bome MIDI Translator 1 Virtual Out
+Options2=TF44494D42T
+
+[MIDI.routes]
+
+
+[MIDIAction]
+MIDIOutActionValue2Expanded=Y
+MIDIOutActionValue1Expanded=Y
+MIDIInActionValue2Expanded=Y
+MIDIInActionValue1Expanded=Y
+MIDIInActionChannelExpanded=Y
+MIDIOutActionChannelExpanded=Y
+
+
+
+[Project]
+AuthorCopyright=Pedro Estrela
+AuthorWWW=www.djestrela.com
+Author=Pedro Estrela
+AuthorContact=pedro.estrela@gmail.com
+Version=2
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA0001000AXDJ-XZ (1)
+Comments=DDJ-1000 screens implemeted in BOME.\nSee technical info on file "BOME implementation notes.txt".\nSee the technical discussion on the DJTT forum: http://forum.djtechtools.com/showthread.php?t=96024\n
+
+[SettingsWindow]
+Width=558
+Top=321
+Left=426
+Height=363
+
