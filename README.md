@@ -1,28 +1,21 @@
 
-# DOCUMENTATION ONLY
-
-This git repo only contains the mapings documentation.
-To download the free mappings, please go to <https://maps.djtechtools.com/>
+This git repo contains the mapings for Traktor for download.
+Previously they were hosted in <https://maps.djtechtools.com/>
 
 # Main mappings
 
 * ddj_1000 with jog screens
-  * [docs](ddj_1000/)
-  * [download](https://maps.djtechtools.com/mappings/9279)
+  * [download](ddj_1000/)
 * ddj_sx2_sz_srt
-  * [docs](ddj_sx2_sz_srt/)
-  * [download](https://maps.djtechtools.com/mappings/9222)
+  * [download](ddj_sx2_sz_srt/)
 * xdj_xz
-  * [docs](xdj_xz/)
-  * [download](https://maps.djtechtools.com/mappings/10305)
+  * [download](xdj_xz/)
 
 # Other mappings
 * numark_party_mix
-  * [docs](numark_party_mix/)
-  * [download](https://maps.djtechtools.com/mappings/9764)
+  * [download](numark_party_mix/)
 * akai_amx
-  * [docs](akai_amx/)
-  * [download](https://maps.djtechtools.com/mappings/9323)
+  * [download](akai_amx/)
 
  
 
