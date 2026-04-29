@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<NIXML><TraktorSettings><Entry Name="Browser.List.RowHeight" Type="1" Value="22"></Entry>
+<Entry Name="Browser.Search.Hide" Type="0" Value="0"></Entry>
+<Entry Name="Browser.SplitterRatio" Type="2" Value="0.347458"></Entry>
+<Entry Name="Fileinfo.Bottom.Left" Type="1" Value="22"></Entry>
+<Entry Name="Fileinfo.Bottom.Mid" Type="1" Value="12"></Entry>
+<Entry Name="Fileinfo.Bottom.Right" Type="1" Value="13"></Entry>
+<Entry Name="Fileinfo.Mid.Left" Type="1" Value="1"></Entry>
+<Entry Name="Fileinfo.Mid.Mid" Type="1" Value="11"></Entry>
+<Entry Name="Fileinfo.Mid.Right" Type="1" Value="16"></Entry>
+<Entry Name="Fileinfo.Top.Left" Type="1" Value="0"></Entry>
+<Entry Name="Fileinfo.Top.Mid" Type="1" Value="7"></Entry>
+<Entry Name="Fileinfo.Top.Right" Type="1" Value="15"></Entry>
+<Entry Name="Flavour" Type="1" Value="1"></Entry>
+<Entry Name="Gui.LayoutFactories" Type="3" Value=""></Entry>
+<Entry Name="Gui.LayoutFactories2" Type="7" Value="Essential -1 1 1 0 2 0 3 0 4 0 5 0 6 1 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 1 15 0 16 0 17 0 18 0 19 1 22 1 23 0 24 0 25 1 26 1 27 1 28 1 29 1 30 1 31 1 33 2 34 0 39 0 40 0 41 1 42 0 43 0 44 0 45 0 46 0 50 0 51 1 52 0 53 0 54 1 55 1 56 1 57 1 58 0 59 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;Extended -2 1 1 1 2 0 3 0 4 0 5 0 6 1 7 0 8 0 9 0 10 0 11 1 12 1 13 0 14 1 15 0 16 0 17 0 18 0 19 1 22 1 23 0 24 0 25 1 26 1 27 1 28 1 29 1 30 1 31 1 33 3 34 1 39 0 40 0 41 1 42 1 43 0 44 0 45 0 46 0 50 0 51 0 52 1 53 0 54 1 55 1 56 1 57 1 58 0 59 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;Browser -3 1 1 0 2 0 3 0 4 0 5 0 6 1 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 1 15 0 16 0 17 0 18 0 19 1 22 1 23 0 24 0 25 1 26 1 27 1 28 1 29 1 30 1 31 1 33 0 34 0 39 0 40 0 41 1 42 1 43 0 44 0 45 0 46 0 50 0 51 1 52 1 53 0 54 1 55 1 56 1 57 1 58 1 59 1 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;Mixer -4 1 1 1 2 0 3 0 4 0 5 0 6 1 7 0 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 1 16 0 17 0 18 0 19 1 22 1 23 0 24 0 25 1 26 1 27 1 28 1 29 1 30 1 31 1 33 3 34 1 39 0 40 0 41 1 42 1 43 0 44 0 45 0 46 0 50 0 51 0 52 1 53 1 54 1 55 1 56 1 57 1 58 0 59 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0"></Entry>
+<Entry Name="Gui.Layouts" Type="3" Value=""></Entry>
+<Entry Name="Gui.Layouts.Version" Type="1" Value="1"></Entry>
+<Entry Name="Gui.Layouts2" Type="7" Value="2D\bwParallel 0 0 1 1 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 1 16 0 17 1 18 1 19 1 22 0 23 6 24 6 25 0 26 1 27 0 28 0 29 1 30 1 31 0 33 6 34 6 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 50 0 51 0 52 0 53 1 54 1 55 0 56 1 57 1 58 1 59 1 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;4D\bwParallel 1 0 1 1 2 0 3 0 4 0 5 0 6 0 7 1 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 0 16 0 17 1 18 1 19 1 22 1 23 6 24 2 25 0 26 1 27 1 28 1 29 1 30 1 31 0 33 6 34 2 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 50 0 51 0 52 0 53 1 54 0 55 0 56 1 57 1 58 1 59 1 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;2D\bwClassic 2 0 1 1 2 0 3 0 4 0 5 0 6 0 7 1 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 1 16 0 17 1 18 1 19 1 22 0 23 4 24 4 25 1 26 1 27 1 28 1 29 1 30 1 31 0 33 4 34 4 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 50 0 51 0 52 0 53 1 54 1 55 1 56 1 57 1 58 0 59 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;4D\bwClassic 3 0 1 1 2 0 3 0 4 0 5 0 6 0 7 1 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 0 16 0 17 1 18 1 19 1 22 1 23 2 24 4 25 1 26 1 27 1 28 0 29 1 30 1 31 0 33 2 34 4 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 50 0 51 0 52 0 53 1 54 0 55 0 56 1 57 1 58 1 59 1 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0;Preparation 4 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 1 11 1 12 1 13 1 14 1 15 1 16 0 17 1 18 1 19 1 22 -1 23 6 24 0 25 2 26 1 27 1 28 1 29 1 30 1 31 1 33 6 34 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 50 0 51 0 52 0 53 0 54 1 55 1 56 1 57 1 58 0 59 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0"></Entry>
+<Entry Name="Misc.Fullscreen.Mode" Type="1" Value="0"></Entry>
+<Entry Name="Misc.Fullscreen.OnStartup" Type="0" Value="0"></Entry>
+<Entry Name="Status.Deck Flavor" Type="5" Value="0;0;0;0"></Entry>
+<Entry Name="Status.Select Layout" Type="5" Value="0"></Entry>
+<Entry Name="Status.Tool Tips Toggle" Type="5" Value="0"></Entry>
+<Entry Name="Version" Type="1" Value="3"></Entry>
+<Entry Name="View.ConsoleMode" Type="0" Value="0"></Entry>
+<Entry Name="View.DeckFocusMode" Type="1" Value="1"></Entry>
+<Entry Name="View.Font" Type="3" Value=""></Entry>
+<Entry Name="View.FontSize" Type="1" Value="15"></Entry>
+<Entry Name="View.MiniPlayer.AlwaysOnTop" Type="0" Value="0"></Entry>
+<Entry Name="WaveDisplay.GridMode" Type="1" Value="0"></Entry>
+<Entry Name="Wavedisplay.ColorMode" Type="1" Value="3"></Entry>
+<Entry Name="Wavedisplay.PlayMarkerPos" Type="1" Value="37"></Entry>
+<Entry Name="Wavedisplay.ShowBarMarkers" Type="0" Value="1"></Entry>
+<Entry Name="Wavedisplay.ShowMinuteMarkers" Type="0" Value="1"></Entry>
+<Entry Name="Wavedisplay.Stripeview" Type="1" Value="0"></Entry>
+</TraktorSettings>
+</NIXML>

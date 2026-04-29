@@ -1,0 +1,139 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[MIDI.routes]
+In0=From Traktor
+In1=From DDJ
+Out0=To DDJ
+Out1=To Traktor
+
+[Preset.0]
+Active=1
+Comments=
+Incoming0=KAM10000KSQ10004011031231211
+Incoming1=KAM10000KSQ10004011032232211
+Incoming10=Tim0TimT0013mouse_mfx_change1_b
+Incoming11=None
+Incoming12=None
+Incoming13=Tim0TimT0013mouse_mfx_change1_z
+Incoming14=Tim0TimT0013mouse_mfx_change1_z
+Incoming15=Tim0TimT0013mouse_mfx_change1_z
+Incoming16=None
+Incoming17=None
+Incoming18=None
+Incoming19=None
+Incoming2=KAM10000KSQ10004011033233211
+Incoming20=None
+Incoming21=None
+Incoming22=None
+Incoming23=None
+Incoming24=None
+Incoming25=None
+Incoming26=None
+Incoming3=KAM10000KSQ10004011034234211
+Incoming4=Tim0TimT000Amfx_change
+Incoming5=None
+Incoming6=None
+Incoming7=Tim0TimT0013mouse_mfx_change1_0
+Incoming8=Tim0TimT0013mouse_mfx_change1_a
+Incoming9=Tim0TimT0013mouse_mfx_change1_a
+Name=MIXER_FX
+Name0=MFX1_NEXT
+Name1=MFX2_NEXT
+Name10=CLICK - DO APPLESCRIPT
+Name11=------
+Name12=------
+Name13=CLICK - MIXER TAB
+Name14=CLICK - CHANNEL
+Name15=CLICK - MFX
+Name16=------
+Name17=------
+Name18=------
+Name19=------
+Name2=MFX3_NEXT
+Name20=------
+Name21=------
+Name22=------
+Name23=------
+Name24=----
+Name25=------
+Name26=------
+Name3=MFX4_NEXT
+Name4=DO CALCULATIONS
+Name5=------
+Name6=------
+Name7=GET PREFS POSITION
+Name8=GET PREFS POSITION
+Name9=DELAY APPLESCRIPT
+Options0=Actv01Stop00OutO00StMa0000000Elabel0017__cmt>// timers: (real)label0029__cmt>//  ga = which mfx to change (1..4)label002C__cmt>//  gb = action todo (-1 down / +1 up)label0038__cmt>//  gc = new value of that channel (comes from g1)label0008__cmt>//label001D__cmt>// static (fake array):label002B__cmt>//  g1..g4 = current chX value (1..9)label0013__cmt>// g0 = timerlabel0006__cmt>label0006__cmt>g0=50label0006__cmt>ga=1gb=1
+Options1=Actv01Stop00OutO00StMa0000000Alabel0017__cmt>// timers: (real)label0029__cmt>//  ga = which mfx to change (1..4)label002C__cmt>//  gb = action todo (-1 down / +1 up)label0038__cmt>//  gc = new value of that channel (comes from g1)label0008__cmt>//label001D__cmt>// static (fake array):label002B__cmt>//  g1..g4 = current chX value (1..9)label0006__cmt>ga=2gb=1
+Options10=Actv01Stop00OutO00StMa00000015label001B__cmt>// just for visiblitykm=kmlabel0006__cmt>label0006__cmt>label0006__cmt>if(z0==0)goto0007windowsif(z0>=1)goto0003maclabel0006__cmt>label0006__cmt>label0007windowsgoto0003endlabel0006__cmt>label0003macif(km==0)noexecuteif(kn==0)noexecutelabel0006__cmt>kn=kn+5goto0003endlabel0006__cmt>label0006__cmt>label0003end
+Options11=Actv00Stop00OutO00
+Options12=Actv00Stop00OutO00
+Options13=Actv01Stop00OutO00Dlayqq:MillisStMa0000000Elabel001A__cmt>// Click "mixer" taboo=43pp=240-19label0006__cmt>label0006__cmt>label0011__cmt>///////////label0017__cmt>// do applescriptoo=oo+kmpp=pp+knlabel0006__cmt>label0006__cmt>label000D__cmt>///////label0018__cmt>// get final delayqq=0
+Options14=Actv01Stop00OutO00Dlayqq:MillisStMa00000023label0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001A__cmt>// mouse error: 20pxlabel0006__cmt>qq=1label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=0label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4label0006__cmt>label0006__cmt>label000D__cmt>///////label0018__cmt>// get final delayif(z0==0)qq=50if(z0==1)qq=100label0006__cmt>label0006__cmt>label0011__cmt>///////////label0017__cmt>// do applescriptoo=oo+kmpp=pp+kn
+Options15=Actv01Stop00OutO00Dlayqq:MillisStMa00000028label001D__cmt>/// min, max, count mfxlabel0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001E__cmt>// options: U = 180..335label0006__cmt>qq=1label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=y1-1rr=rr*18label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4label0006__cmt>label0006__cmt>label000D__cmt>///////label0018__cmt>// get final delayif(z0==0)qq=75if(z0==1)qq=175label0006__cmt>label0006__cmt>label0011__cmt>///////////label0017__cmt>// do applescriptoo=oo+kmpp=pp+knlabel0006__cmt>label0006__cmt>label0006__cmt>
+Options16=Actv00Stop00OutO00
+Options17=Actv00Stop00OutO00
+Options18=Actv00Stop00OutO00
+Options19=Actv00Stop00OutO00
+Options2=Actv01Stop00OutO00StMa0000000Alabel0017__cmt>// timers: (real)label0029__cmt>//  ga = which mfx to change (1..4)label002C__cmt>//  gb = action todo (-1 down / +1 up)label0038__cmt>//  gc = new value of that channel (comes from g1)label0008__cmt>//label001D__cmt>// static (fake array):label002B__cmt>//  g1..g4 = current chX value (1..9)label0006__cmt>ga=3gb=1
+Options20=Actv00Stop00OutO00
+Options21=Actv00Stop00OutO00
+Options22=Actv00Stop00OutO00
+Options23=Actv00Stop00OutO00
+Options24=Actv00Stop00OutO00
+Options25=Actv00Stop00OutO00
+Options26=Actv00Stop00OutO00
+Options3=Actv01Stop00OutO00StMa0000000Alabel0017__cmt>// timers: (real)label0029__cmt>//  ga = which mfx to change (1..4)label002C__cmt>//  gb = action todo (-1 down / +1 up)label0038__cmt>//  gc = new value of that channel (comes from g1)label0008__cmt>//label001D__cmt>// static (fake array):label002B__cmt>//  g1..g4 = current chX value (1..9)label0006__cmt>ga=4gb=1
+Options4=Actv01Stop00OutO00StMa0000001Dlabel0017__cmt>// timers: (real)label0029__cmt>//  ga = which mfx to change (1..4)label002C__cmt>//  gb = action todo (-1 down / +1 up)label0038__cmt>//  gc = new value of that channel (comes from g1)label0008__cmt>//label001D__cmt>// static (fake array):label002B__cmt>//  g1..g4 = current chX value (1..9)label0006__cmt>label0027__cmt>// get current value (fake array)if(ga==1)xx=g1if(ga==2)xx=g2if(ga==3)xx=g3if(ga==4)xx=g4label0006__cmt>xx=xx+gbif(xx<1)xx=9if(xx>9)xx=1label0006__cmt>if(ga==1)g1=xxif(ga==2)g2=xxif(ga==3)g3=xxif(ga==4)g4=xxlabel0006__cmt>y1=xxlabel0006__cmt>label000F__cmt>//gc=xx-1label0010__cmt>//gc=gc*18label0006__cmt>label0006__cmt>
+Options5=Actv00Stop00OutO00
+Options6=Actv00Stop00OutO00
+Options7=Actv01Stop00OutO00StMa0000000Clabel0024__cmt>// XY position for AppleScriptkm=0kn=0label0006__cmt>label0006__cmt>label0014__cmt>// mac versionz0=1label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Options8=Actv01Stop00OutO00StMa00000005label0006__cmt>if(z0==0)noexecutelabel0006__cmt>label001E__cmt>// do applescript in maclabel0006__cmt>
+Options9=Actv01Stop00OutO00StMa00000003label0030__cmt>// do different delays for Windows and Macif(z0==0)qq=0if(z0==1)qq=200
+Outgoing0=Tim0TimS000Amfx_change1:0:1
+Outgoing1=Tim0TimS000Amfx_change1:0:1
+Outgoing10=Tim0TimS0013mouse_mfx_change1_z1:0:1
+Outgoing11=None
+Outgoing12=None
+Outgoing13=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Outgoing14=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Outgoing15=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Outgoing16=None
+Outgoing17=None
+Outgoing18=None
+Outgoing19=None
+Outgoing2=Tim0TimS000Amfx_change1:0:1
+Outgoing20=None
+Outgoing21=None
+Outgoing22=None
+Outgoing23=None
+Outgoing24=None
+Outgoing25=None
+Outgoing26=None
+Outgoing3=Tim0TimS000Amfx_change1:0:1
+Outgoing4=Tim0TimS0013mouse_mfx_change1_01:0:1
+Outgoing5=None
+Outgoing6=None
+Outgoing7=Tim0TimS0013mouse_mfx_change1_a1:0:1
+Outgoing8=ApSc<Outgoing Action="AppleScript"><Script>tell application &quot;System Events&quot; &#10;tell application process &quot;Traktor&quot; &#10;tell window &quot;Preferences&quot;&#10;   #get position of window 0&#10;  # get position&#10;  #click {43, 220}&#10;&#10;set xy to position&#10;set x to (item 1 of xy)&#10;set y to (item 2 of xy) &#10;&#10;end tell&#10;end tell&#10;end tell&#10;&#10;setVariable(&quot;km&quot;, x)&#10;setVariable(&quot;kn&quot;, y)</Script><Description>Get Preferences Position</Description></Outgoing>
+Outgoing9=Tim0TimS0013mouse_mfx_change1_b1:qq:1
+PresetSwitchIgnore=0
+
+[Project]
+Author=Pedro Estrela
+AuthorContact=pedro.estrela@gmail.com
+AuthorCopyright=Pedro Estrela
+AuthorWWW=www.djestrela.com
+Comments=DDJ-1000 screens implemeted in BOME.\nSee technical info on file "BOME implementation notes.txt".\nSee the technical discussion on the DJTT forum: http://forum.djtechtools.com/showthread.php?t=96024\n
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00010006To DDJ
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=vBPDL15YTNWjQBMsrx9WRjltaNufhQTCIh5dtSak9jOitUM1L+EozkEZ7Zv7cFX9VKYFucG9YN129cw1ZN3CtVXfsXIKuBsqOcjjywuxAlnmOdMD3Arrde4NTw5bgTmaqbrCh5tLw3hfVy0wwYpxwnIQrcZ3wLOlDYNGME3dOnQ=
+SignedBy-1=Pedro Estrela
+

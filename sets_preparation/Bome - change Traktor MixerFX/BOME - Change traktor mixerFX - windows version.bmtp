@@ -1,0 +1,99 @@
+; ------- Bome MIDI Translator: Signed Project File
+; ------- You can modify this file as you like, but that will invalidate
+; ------- the signature so that it cannot be opened in MT Player anymore.
+;
+[MIDI.routes]
+In0=From Traktor
+Out0=To DDJ
+In1=From DDJ
+Out1=To Traktor
+[Preset.0]
+Name=MIXER_FX
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=MFX NEXT CH1
+Incoming0=KAM10000KSQ10004011031231211
+Outgoing0=Tim0TimS0011mouse_mfx_change11:0:1
+Options0=Actv01Stop00OutO00StMa0000000Flabel0013__cmt>// variables:label002B__cmt>//  y1..y4 = mixerFX chX value (1..9)label001A__cmt>//  y0 = delay timerlabel0006__cmt>label0006__cmt>rr=y1label0006__cmt>label0009__cmt>///rr=rr+1if(rr>9)rr=1label0006__cmt>label000A__cmt>////y1=rrlabel0006__cmt>y0=50
+Name1=MFX NEXT CH2
+Incoming1=KAM10000KSQ10004011032232211
+Outgoing1=Tim0TimS0011mouse_mfx_change21:0:1
+Options1=Actv01Stop00OutO00StMa0000000Flabel0013__cmt>// variables:label002B__cmt>//  y1..y4 = mixerFX chX value (1..9)label001A__cmt>//  y0 = delay timerlabel0006__cmt>label0006__cmt>rr=y2label0006__cmt>label0009__cmt>///rr=rr+1if(rr>9)rr=1label0006__cmt>label000A__cmt>////y2=rrlabel0006__cmt>y0=50
+Name2=------
+Incoming2=None
+Outgoing2=None
+Options2=Actv00Stop00OutO00
+Name3=------
+Incoming3=None
+Outgoing3=None
+Options3=Actv00Stop00OutO00
+Name4=------
+Incoming4=None
+Outgoing4=None
+Options4=Actv00Stop00OutO00
+Name5=------ MOUSE MFX CH1 ----
+Incoming5=None
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=CLICK - MIXER TAB
+Incoming6=Tim0TimT0011mouse_mfx_change1
+Outgoing6=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options6=Actv01Stop00OutO00Dlay0:MillisStMa00000004label001A__cmt>// Click "mixer" taboo=43pp=240-19label0006__cmt>
+Name7=CLICK - CHANNEL
+Incoming7=Tim0TimT0011mouse_mfx_change1
+Outgoing7=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options7=Actv01Stop00OutO00Dlay50:MillisStMa00000017label0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001A__cmt>// mouse error: 20pxlabel0006__cmt>qq=1label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=0label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4
+Name8=CLICK - MFX
+Incoming8=Tim0TimT0011mouse_mfx_change1
+Outgoing8=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options8=Actv01Stop00OutO00Dlay75:MillisStMa0000001Flabel001D__cmt>/// min, max, count mfxlabel0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001E__cmt>// options: U = 180..335label0006__cmt>qq=1label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=y1-1rr=rr*18label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Name9=------
+Incoming9=None
+Outgoing9=None
+Options9=Actv00Stop00OutO00
+Name10=------
+Incoming10=None
+Outgoing10=None
+Options10=Actv00Stop00OutO00
+Name11=------ MOUSE MFX CH2 ----
+Incoming11=None
+Outgoing11=None
+Options11=Actv00Stop00OutO00
+Name12=CLICK - MIXER TAB
+Incoming12=Tim0TimT0011mouse_mfx_change2
+Outgoing12=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options12=Actv01Stop00OutO00Dlay0:MillisStMa00000004label001A__cmt>// Click "mixer" taboo=43pp=240-19label0006__cmt>
+Name13=CLICK - CHANNEL
+Incoming13=Tim0TimT0011mouse_mfx_change2
+Outgoing13=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options13=Actv01Stop00OutO00Dlay50:MillisStMa00000017label0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001A__cmt>// mouse error: 20pxlabel0006__cmt>qq=2label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=0label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4
+Name14=CLICK - MFX
+Incoming14=Tim0TimT0011mouse_mfx_change2
+Outgoing14=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X var="oo"/><Y var="pp"/><WindowsTargetWindow>/NINormalWindow0000000140000000</WindowsTargetWindow></Outgoing>
+Options14=Actv01Stop00OutO00Dlay75:MillisStMa0000001Flabel001D__cmt>/// min, max, count mfxlabel0016__cmt>// X= 323 .. 542label0017__cmt>// y= 160 ..  177label001E__cmt>// options: U = 180..335label0006__cmt>qq=2label0006__cmt>if(qq==1)oo=339if(qq==2)oo=562if(qq==3)oo=339if(qq==4)oo=562label0006__cmt>if(qq==1)pp=132if(qq==2)pp=132if(qq==3)pp=132+18if(qq==4)pp=132+18label0006__cmt>label0006__cmt>label000A__cmt>////rr=y2-1rr=rr*18label0006__cmt>label0019__cmt>// add final optionpp=pp+rrpp=pp+4label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Name15=------
+Incoming15=None
+Outgoing15=None
+Options15=Actv00Stop00OutO00
+Name16=------
+Incoming16=None
+Outgoing16=None
+Options16=Actv00Stop00OutO00
+Name17=------
+Incoming17=None
+Outgoing17=None
+Options17=Actv00Stop00OutO00
+[Project]
+Version=2
+Author=Pedro Estrela
+AuthorContact=pedro.estrela@gmail.com
+Comments=DDJ-1000 screens implemeted in BOME.\nSee technical info on file "BOME implementation notes.txt".\nSee the technical discussion on the DJTT forum: http://forum.djtechtools.com/showthread.php?t=96024\n
+AuthorWWW=www.djestrela.com
+AuthorCopyright=Pedro Estrela
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00010006To DDJ
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=rX7qhkiJJTsQ3pZtX4OnJS904ip0l+GMxn7AJiChrfqY9qbiFY5Uv70keLwA6I8VI5z0Zkxa/XlckWIfO7y8pB6sj1ewsYgfZPaBYnYu0B26CRd+9F/gSczY0tWUvDfeAowBkcQkZRdJmhCnCOwU8iPKgvBeO+SIeJAvKAv1g3Y=
+SignedBy-1=Pedro Estrela

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<NIXML><TraktorSettings><Entry Name="Analytics.LastCrashReportTime" Type="1" Value="1581186886"></Entry>
+<Entry Name="Audio.ChannelFX.1.Type" Type="1" Value="5"></Entry>
+<Entry Name="Audio.ChannelFX.2.Type" Type="1" Value="7"></Entry>
+<Entry Name="Audio.ChannelFX.3.Type" Type="1" Value="7"></Entry>
+<Entry Name="Audio.ChannelFX.4.Type" Type="1" Value="0"></Entry>
+<Entry Name="Audio.FX.Selection" Type="5" Value="1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;24;25;26;27;28;29;31;32;33;34;35;36;37;42;56;58;59;62;74;76;84;85;87;89"></Entry>
+<Entry Name="BackgroundThread.AutoAnalyze" Type="0" Value="0"></Entry>
+<Entry Name="BackgroundThread.AutoAnalyzeOnLoad" Type="0" Value="1"></Entry>
+<Entry Name="BackgroundThread.DetermineTime" Type="0" Value="1"></Entry>
+<Entry Name="Browser.BPM.AutoGrid" Type="0" Value="1"></Entry>
+<Entry Name="Browser.BPMRange.Mode" Type="1" Value="3"></Entry>
+<Entry Name="Browser.ID3Mode" Type="1" Value="2"></Entry>
+<Entry Name="Browser.ITunes.UseLegacyXML" Type="0" Value="0"></Entry>
+<Entry Name="Browser.ImportMusicFolderAtStartup" Type="0" Value="0"></Entry>
+<Entry Name="Browser.KeyHighlightMode" Type="1" Value="1"></Entry>
+<Entry Name="Browser.KeyHighlightReference" Type="1" Value="0"></Entry>
+<Entry Name="Browser.KeyNotation.Displayed" Type="1" Value="2"></Entry>
+<Entry Name="Browser.KeyNotation.Exported" Type="1" Value="2"></Entry>
+<Entry Name="Browser.KeyNotation.Exported.ByPass" Type="1" Value="0"></Entry>
+<Entry Name="Browser.List.AllowInplaceEdit" Type="0" Value="0"></Entry>
+<Entry Name="Browser.List.Downloads" Type="3" Value="36 0 47 30 -100 24 -19 2 248 3 174 4 46 5 -118 6 -79 7 120 8 100 9 100 10 -100 11 -35 12 -100 13 -100 14 -264 15 -200 16 100 17 -100 18 100 19 100 20 100 21 80 22 -80 23 -74 25 -80 26 -80 27 -100 28 -100 29 -100 1 -100 31 100 32 -100 33 -100 34 -100 35 -100 "></Entry>
+<Entry Name="Browser.List.History" Type="3" Value="39 0 35 1 16 2 239 3 75 4 100 5 100 6 50 7 100 8 35 9 100 10 100 11 100 12 35 13 100 14 100 15 100 16 200 17 100 18 100 19 100 20 100 21 100 22 80 23 80 24 74 25 100 26 80 27 80 28 207 29 100 30 100 31 100 32 -100 33 -100 34 -100 35 100 36 100 37 100 38 100 "></Entry>
+<Entry Name="Browser.List.Normal" Type="3" Value="39 0 47 1 44 5 81 20 56 4 55 3 346 2 346 7 -275 25 -82 28 -65 22 -76 27 -88 11 -229 9 -101 8 -114 6 -50 10 -100 12 -35 13 -100 14 808 15 256 16 -200 17 -100 18 -100 19 -100 21 -100 23 -80 24 -74 26 -80 29 -100 30 -100 31 -100 32 -35 33 -100 34 -100 35 -100 36 -100 37 -100 38 -100 "></Entry>
+<Entry Name="Browser.Traktor.List.AutoplayLoops" Type="0" Value="1"></Entry>
+<Entry Name="Consistency.Check.Startup" Type="0" Value="0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX1" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX10" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX11" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX12" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX13" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX14" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX15" Type="5" Value="1;1;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX16" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX17" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX18" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX19" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX2" Type="5" Value="0;1;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX24" Type="5" Value="0;1;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX25" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX26" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX27" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX28" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX29" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX3" Type="5" Value="0;1;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX31" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX32" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX33" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX34" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX35" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX36" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX37" Type="5" Value="0;0;1;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX4" Type="5" Value="1;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX42" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX5" Type="5" Value="0;1;1;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX56" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX58" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX59" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX6" Type="5" Value="0;1;1;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX62" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX7" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX74" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX76" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX8" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX84" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX85" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX87" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX89" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_BUTTON_FX9" Type="5" Value="0;0;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX1" Type="6" Value="0.219608;0.372549;0.498039;0.501961;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX10" Type="6" Value="0.501961;0.619608;0.745098;0.498039;0.505882"></Entry>
+<Entry Name="DEFAULT_PARAM_FX11" Type="6" Value="0;1;0.501961;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX12" Type="6" Value="0.501961;1;0.501961;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX13" Type="6" Value="0.8;0.49975;0.5;0.5;0.5"></Entry>
+<Entry Name="DEFAULT_PARAM_FX14" Type="6" Value="0.40098;0.490196;0.498039;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX15" Type="6" Value="0.623775;0.498039;1;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX16" Type="6" Value="0.501961;0.498039;0.498039;0.498039;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX17" Type="6" Value="0.270588;0.701961;0.498039;0.498039;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX18" Type="6" Value="0.501961;0.498039;0.752941;0.498039;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX19" Type="6" Value="0;0.501961;0.898039;0.498039;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX2" Type="6" Value="0.501961;0.501961;0.501961;0.505882;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX24" Type="6" Value="0;0;0.498039;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX25" Type="6" Value="0;0.498039;0.498039;1;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX26" Type="6" Value="0;0.501961;0.501961;0.498039;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX27" Type="6" Value="0.501961;0.498039;1;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX28" Type="6" Value="0.552941;0.498039;0.541176;0.498039;0.498039"></Entry>
+<Entry Name="DEFAULT_PARAM_FX29" Type="6" Value="0.760539;0.541176;0.498039;0.498039;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX3" Type="6" Value="0.498039;0.498039;1;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX31" Type="6" Value="0.666667;0;0;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX32" Type="6" Value="0;0.501961;0.498039;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX33" Type="6" Value="0;0.498039;0;0;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX34" Type="6" Value="0;0.498039;0.501961;0.501961;0.498039"></Entry>
+<Entry Name="DEFAULT_PARAM_FX35" Type="6" Value="0.239645;0.505882;0.690196;0.501961;0.501961"></Entry>
+<Entry Name="DEFAULT_PARAM_FX36" Type="6" Value="0.799127;0;0.501961;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX37" Type="6" Value="0;0.498039;1;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX4" Type="6" Value="0.294118;0.341176;0;0.498039;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX42" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX5" Type="6" Value="0.501961;0.698039;0.501961;0.501961;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX56" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX58" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX59" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX6" Type="6" Value="0.501961;0.498039;0.501961;0;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX62" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX7" Type="6" Value="0.498039;0.635294;0.501961;0.501961;0.498039"></Entry>
+<Entry Name="DEFAULT_PARAM_FX74" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX76" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX8" Type="6" Value="0;1;0.6;0.509804;1"></Entry>
+<Entry Name="DEFAULT_PARAM_FX84" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX85" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX87" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX89" Type="6" Value="0.5;0.5;0;0;0"></Entry>
+<Entry Name="DEFAULT_PARAM_FX9" Type="6" Value="0;1;0.498039;0;1"></Entry>
+<Entry Name="Deck.Default.Zoom" Type="2" Value="-0.500000"></Entry>
+<Entry Name="Deck.DustDetect.Show" Type="0" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolF1.Behavior.MuteSwap" Type="0" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolF1.LED.BrightnessOff" Type="1" Value="20"></Entry>
+<Entry Name="DeviceIO.KontrolF1.LED.BrightnessOn" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolF1.MidiMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS2.GainEncoderMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS2.JogPushLeftDisabled" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS2.JogPushRightDisabled" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS2.LED.BrightnessOff" Type="1" Value="20"></Entry>
+<Entry Name="DeviceIO.KontrolS2.LED.BrightnessOn" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolS2.LedMeterMode" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS2.LoopButtonMode" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS2.Midi.Disable" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS2.PresetFx.1" Type="1" Value="13"></Entry>
+<Entry Name="DeviceIO.KontrolS2.PresetFx.2" Type="1" Value="19"></Entry>
+<Entry Name="DeviceIO.KontrolS2.PresetFx.3" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS2.TempoFaderMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.BeatJumpButtons" Type="1" Value="3"></Entry>
+<Entry Name="DeviceIO.KontrolS4.HotcueButtonMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.JogMode" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS4.JogPushLeftDisabled" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.JogPushRightDisabled" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.LED.BrightnessOff" Type="1" Value="20"></Entry>
+<Entry Name="DeviceIO.KontrolS4.LED.BrightnessOn" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolS4.LoadButtonMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.LoopButtonMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.PresetFx.1" Type="1" Value="13"></Entry>
+<Entry Name="DeviceIO.KontrolS4.PresetFx.2" Type="1" Value="19"></Entry>
+<Entry Name="DeviceIO.KontrolS4.PresetFx.3" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolS4.TempoFaderMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.ViewSwitch.Left" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolS4.ViewSwitch.Right" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1.DefaultMapping" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1.DefaultMapping.1st" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1.DefaultMapping.2nd" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolX1.LED.Brightness" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolX1.LED.Brightness.Off" Type="1" Value="10"></Entry>
+<Entry Name="DeviceIO.KontrolX1.Midi.Disable" Type="0" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1.ModMode.Hotcue" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolX1.ModMode.Shift" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.BrowseEncorder.BrowseOnTouch" Type="1" Value="1"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.BrowseEncorder.ShiftBrowseFavorites" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.FluxButton.Primary" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.FluxButton.Secondary" Type="1" Value="3"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.LED.Brightness.Off" Type="1" Value="10"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.LED.Brightness.On" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.Assignment" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.BendSensitivity" Type="1" Value="50"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.InvertBend" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.InvertSeek" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.SeekBehaviour" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.SeekSensitivity" Type="1" Value="50"></Entry>
+<Entry Name="DeviceIO.KontrolX1MK2.Touchstrip.SplitMode" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolZ1.LED.BrightnessOff" Type="1" Value="20"></Entry>
+<Entry Name="DeviceIO.KontrolZ1.LED.BrightnessOn" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolZ1.Midi.Enable" Type="0" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.Audio.MuteAuxDSP" Type="0" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.LED.BrightnessOff" Type="1" Value="20"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.LED.BrightnessOn" Type="1" Value="100"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.Midi.Disable" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.SecondaryCueFunc.SampleDeck" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.KontrolZ2.SecondaryCueFunc.TrackDeck" Type="1" Value="0"></Entry>
+<Entry Name="DeviceIO.Selected.Device.Index" Type="1" Value="-1"></Entry>
+<Entry Name="FS1.Record.LeadIn" Type="1" Value="5"></Entry>
+<Entry Name="FileAccess.TagsSerialization" Type="1" Value="2"></Entry>
+<Entry Name="Flavour" Type="1" Value="1"></Entry>
+<Entry Name="Gui.Accessor.Resolution" Type="7" Value="5 2;6 2;8 2;17 2;29 2;102 2;117 2;118 2;123 2;124 0;127 2;232 2;249 2;251 2;282 2;295 2;301 2;302 2;303 2;316 2;320 2;365 2;366 2;367 2;368 2;402 2;2294 0;3053 2;3054 2"></Entry>
+<Entry Name="Imports.File.Hierarchy" Type="1" Value="3"></Entry>
+<Entry Name="Informer.On" Type="0" Value="1"></Entry>
+<Entry Name="Loading.Advanced.AutoLoad" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Advanced.CueToMarker" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Reset.Deck" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Reset.Mixer" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Security.DuplicateWhenLoadingSameTrack" Type="0" Value="1"></Entry>
+<Entry Name="Loading.Security.NoLoading" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Security.StopDeck" Type="0" Value="0"></Entry>
+<Entry Name="Loading.Timecode.SwitchAbsolute" Type="0" Value="0"></Entry>
+<Entry Name="LoopRecorder.Latency" Type="2" Value="9.803922"></Entry>
+<Entry Name="LoopRecorder.OverdubDecay" Type="2" Value="10.000000"></Entry>
+<Entry Name="MetadataSync.Enabled" Type="0" Value="0"></Entry>
+<Entry Name="Misc.GridmarkerAsHotcue" Type="0" Value="0"></Entry>
+<Entry Name="Mixer.CrossfadeTime" Type="2" Value="4.000000"></Entry>
+<Entry Name="Recording.Prefix" Type="3" Value=""></Entry>
+<Entry Name="Recording.Source" Type="1" Value="4"></Entry>
+<Entry Name="Recording.Splitsize" Type="1" Value="2048"></Entry>
+<Entry Name="RemixDeck.Behaviour.AutoEnableDeckPlayOnSampleTrigger" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Behaviour.OneShotSampleIgnorePunchMode" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Behaviour.OneShotSampleIgnoreQuantize" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Layout.AutoGainLoadingSamples" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Layout.PermanentlyShowSlotIndicators" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Layout.ShowFilterFader" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Layout.ShowVolumeFader" Type="0" Value="1"></Entry>
+<Entry Name="RemixDeck.Saving.AutoSaveEditedSampleSets" Type="0" Value="1"></Entry>
+<Entry Name="Routing.Out.Internal.Master.Mono" Type="0" Value="0"></Entry>
+<Entry Name="Routing.Out.Internal.Monitor.Mono" Type="0" Value="0"></Entry>
+<Entry Name="Routing.Out.SendFX" Type="0" Value="0"></Entry>
+<Entry Name="SampleSlot.Autosave" Type="0" Value="1"></Entry>
+<Entry Name="Scratch.Input.Mode" Type="1" Value="0"></Entry>
+<Entry Name="Scratch.Korg.VinylMode" Type="0" Value="1"></Entry>
+<Entry Name="Scratch.Leadin.Mode" Type="1" Value="0"></Entry>
+<Entry Name="Scratch.Mode.45RpM" Type="0" Value="0"></Entry>
+<Entry Name="Status.4 FX Units" Type="5" Value="1"></Entry>
+<Entry Name="Status.Cue/Loop Move Mode" Type="5" Value="0;0;2;0"></Entry>
+<Entry Name="Status.Cue/Loop Move Size" Type="5" Value="10;10;11;11"></Entry>
+<Entry Name="Status.Deck Mode" Type="5" Value="0;0;0;0"></Entry>
+<Entry Name="Status.Deck Mode CD" Type="5" Value="0"></Entry>
+<Entry Name="Status.EQ Mode" Type="5" Value="4"></Entry>
+<Entry Name="Status.Effect 1 Select" Type="5" Value="17;14;17;25"></Entry>
+<Entry Name="Status.Effect 2 Select" Type="5" Value="0;34;14;0"></Entry>
+<Entry Name="Status.Effect 3 Select" Type="5" Value="39;39;19;0"></Entry>
+<Entry Name="Status.Effect Routing" Type="5" Value="2;2;2;2"></Entry>
+<Entry Name="Status.FX Panel Mode" Type="5" Value="0;0;0;0"></Entry>
+<Entry Name="Status.FX Restore Preset on Switch" Type="5" Value="1"></Entry>
+<Entry Name="Status.Filter Mode" Type="5" Value="0"></Entry>
+<Entry Name="Status.Loop Size" Type="5" Value="7;7;7;7"></Entry>
+<Entry Name="Status.Match EQ/Filter Models to NI Mixer" Type="5" Value="1"></Entry>
+<Entry Name="Status.Quant On" Type="5" Value="1"></Entry>
+<Entry Name="Status.Quantization Index" Type="5" Value="2;1;2;1"></Entry>
+<Entry Name="Status.Quantize Enable" Type="5" Value="1;0;1;0"></Entry>
+<Entry Name="Status.Snap Mode" Type="5" Value="1"></Entry>
+<Entry Name="Status.Snap Mode Wavedisplay" Type="5" Value="0"></Entry>
+<Entry Name="Status.Tempo Range" Type="5" Value="2;2;10;10"></Entry>
+<Entry Name="TimeStretch.KeyLockRange" Type="1" Value="1"></Entry>
+<Entry Name="TimeStretch.ShowResultingKey" Type="0" Value="1"></Entry>
+<Entry Name="Transport.Cache.AB" Type="1" Value="2"></Entry>
+<Entry Name="Transport.Cache.CD" Type="1" Value="0"></Entry>
+<Entry Name="Transport.FS.Continue" Type="0" Value="0"></Entry>
+<Entry Name="Transport.FS.Ignore" Type="0" Value="0"></Entry>
+<Entry Name="Transport.Loops.AutodetectSize" Type="1" Value="10"></Entry>
+<Entry Name="Transport.Loops.PhaseSyncOnExit" Type="0" Value="1"></Entry>
+<Entry Name="Transport.MasterQualified" Type="0" Value="0"></Entry>
+<Entry Name="Transport.OnAirDecksMaster" Type="0" Value="1"></Entry>
+<Entry Name="Transport.Pitch.Fine" Type="2" Value="2.000000"></Entry>
+<Entry Name="Transport.PitchBend.Progressive" Type="0" Value="1"></Entry>
+<Entry Name="Transport.PitchBend.Sens" Type="2" Value="100.000000"></Entry>
+<Entry Name="Transport.PlayedStateDelay" Type="2" Value="10.000000"></Entry>
+<Entry Name="Transport.Scratch.RecordFlip" Type="0" Value="0"></Entry>
+<Entry Name="Transport.Scratch.RelativeSkipToStart" Type="0" Value="1"></Entry>
+<Entry Name="Transport.Scratch.SwitchAbsolute" Type="0" Value="0"></Entry>
+<Entry Name="Transport.Scratch.VinylLoad" Type="0" Value="1"></Entry>
+<Entry Name="Transport.SyncMode" Type="1" Value="0"></Entry>
+<Entry Name="Transport.Synchronize.FadeMarkers" Type="0" Value="0"></Entry>
+<Entry Name="Transport.Synchronize.Start" Type="0" Value="0"></Entry>
+<Entry Name="UltraControl.ShowValue" Type="0" Value="1"></Entry>
+<Entry Name="Version" Type="1" Value="3"></Entry>
+<Entry Name="View.Language" Type="1" Value="0"></Entry>
+<Entry Name="View.PhraseLength" Type="1" Value="4"></Entry>
+<Entry Name="Wavedisplay.WarningClock" Type="1" Value="30"></Entry>
+</TraktorSettings>
+</NIXML>
