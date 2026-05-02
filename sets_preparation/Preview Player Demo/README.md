@@ -11,6 +11,5 @@
 *	W: Down in list / Seek right
 *	Z: hold for preview player
 
-!Preview Player demo.jpg
-![Preview Player demo.jpg](Preview Player demo.jpg)
 
+<img width="588" height="628" alt="image" src="Preview Player demo.jpg" />
