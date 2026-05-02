@@ -11,4 +11,6 @@
 *	W: Down in list / Seek right
 *	Z: hold for preview player
 
+!Preview Player demo.jpg
+![Preview Player demo.jpg](Preview Player demo.jpg)
 
