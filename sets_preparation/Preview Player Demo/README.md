@@ -1,0 +1,14 @@
+
+
+## Preview Player:
+* Hold a button to start listening the preview player
+* Without moving your hand, turn the encoder to seek inside the preview player
+* Release button to stop listening
+* 	Without moving your hand, turn the encoder to seek to select another track
+
+## Keyboard mapping:
+*	Q: Up in list / Seek left
+*	W: Down in list / Seek right
+*	Z: hold for preview player
+
+
